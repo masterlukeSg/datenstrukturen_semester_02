@@ -1,5 +1,21 @@
 # Zettel0
 
+Arbeitsaufteilung
+    Aufgabe 1: 
+        Stack -> Imen 
+        Queue -> Imen
+        Einfach verkettete Liste -> Aicha
+        Doppelt verkettete Liste -> Aicha
+        Priority Queue -> Aicha
+        Hashende Menge -> Lukas
+        Geordnete Menge -> Lukas 
+
+
+
+
+
+
+
 
 
 ## Getting started
