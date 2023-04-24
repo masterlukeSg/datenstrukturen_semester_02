@@ -1,7 +1,7 @@
 #include <iostream>
 
 
-namespace stacktemplate{
+namespace ProjectAlpha{
 
 
     template <class T>
