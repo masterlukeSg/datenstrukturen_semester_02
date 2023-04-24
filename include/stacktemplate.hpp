@@ -1,13 +1,12 @@
 #include <iostream>
 
 
-namespace stack{
+namespace stacktemplate{
 
 
     template <class T>
 
-
-    class stack {
+    class stacktemplate {
         public:
 
         
