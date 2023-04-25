@@ -12,7 +12,7 @@ namespace ProjectAlpha
         virtual bool find(K) = 0;
         virtual void remove(K) = 0;
         // Belegungsfaktor wird errechnet, um die Buckets gleichmßig zu füllen
-        virtual void belegungsfaktor(K) = 0;
+        virtual void belegungsfaktor() = 0;
     };
 
 

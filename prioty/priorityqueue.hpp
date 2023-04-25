@@ -1,5 +1,5 @@
 #include <priorityqueueTemplate.hpp>
-
+#include <vector>
 namespace ProjectAlpha
 {
     template <class T, class priority>
@@ -11,5 +11,8 @@ namespace ProjectAlpha
         Iterator get_Iter() override;
         void insert(T, priority) override;
         T extract_top() override;
+
+    private:
+        std::vector queue;
     };
 }

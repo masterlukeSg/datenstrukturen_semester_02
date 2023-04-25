@@ -5,41 +5,44 @@
 #include <vector>
 #include <functional>
 
-using namespace ProjectAlpha;
-
-class HashendeMengeRealisation : public HashendeMenge<std::string>
+namespace ProjectAlpha
 {
-private:
-    // Die verwendete Hashfunktion.
-    // Um den Bucket eines Elements x zu finden
-    // kann die Hashfkt wie folgt verwendet werden
-    //   hashfkt(x) % num_buckets;
-    const std::function<size_t(const std::string &)> hashfkt;
 
-    // Die aktuelle Anzahl der Buckets
-    size_t num_buckets;
+    template <class T>
+    class HashendeMengeRealisation : public HashendeMenge<T>
+    {
+    private:
+        // Die verwendete Hashfunktion.
+        // Um den Bucket eines Elements x zu finden
+        // kann die Hashfkt wie folgt verwendet werden
+        //   hashfkt(x) % num_buckets;
+        const std::function<size_t(const T&)> hashfkt;
 
-    // ToDO: List von AIcha implementieren
-    std::vector<List<std::string>> buckets;
+        // Die aktuelle Anzahl der Buckets
+        size_t num_buckets;
 
-public:
-    // Konstruktor
-    HashendeMengeRealisation();
-    // Element einfügen
-    void insert(std::string) override;
+        // ToDO: List von AIcha implementieren
+        std::vector<List<T>> buckets;
 
-    // Gibt genau dann true zurück,
-    // wenn das Element in der Hashtable enthalten ist
-    bool find(std::string) override;
+    public:
+        // Konstruktor
+        HashendeMengeRealisation();
+        // Element einfügen
+        void insert(T) override;
 
-    // Element entfernen
-    void remove(std::string) override;
+        // Gibt genau dann true zurück,
+        // wenn das Element in der Hashtable enthalten ist
+        bool find(T) override;
 
-    // Druckt alle Elemente der Hashtable
-    void print() const;
+        // Element entfernen
+        void remove(T) override;
 
-    // Gibt Anzahl der Elemente zurück
-    size_t size() const;
-    // Belegungsfaktor wird errechnet, um die Buckets gleichmßig zu füllen
-    void belegungsfaktor(std::string) override;
-};
+        // Druckt alle Elemente der Hashtable
+        void print();
+
+        // Gibt Anzahl der Elemente zurück
+        size_t size();
+        // Belegungsfaktor wird errechnet, um die Buckets gleichmßig zu füllen
+        void belegungsfaktor() override;
+    };
+}

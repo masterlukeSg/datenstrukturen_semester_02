@@ -1,8 +1,9 @@
-#include "../include/list.hpp"
+#include "list.hpp"
 #include "../include/listnode.hpp"
 #include "iostream"
 
-namespace ProjectAlpha{
+namespace ProjectAlpha
+{
 
     template <class T>
     std::shared_ptr<ListNode<T>> List<T>::insert_front(T x)
@@ -12,8 +13,8 @@ namespace ProjectAlpha{
         head = newPointer;
         return newPointer;
     }
- template <class T>
-    std::shared_ptr<ListNode<T>> List<T>::insert_after(const std::shared_ptr<ListNode<T>>& previousPointer, T x)
+    template <class T>
+    std::shared_ptr<ListNode<T>> List<T>::insert_after(const std::shared_ptr<ListNode<T>> &previousPointer, T x)
     {
         std::shared_ptr<ListNode<T>> newPointer = std::make_shared<ListNode<T>>(x);
         newPointer->next = previousPointer->next;
@@ -22,7 +23,7 @@ namespace ProjectAlpha{
     }
 
     template <class T>
-    std::shared_ptr<ListNode<T>> List<T>::remove_after(const std::shared_ptr<ListNode<T>>& previousPointer)
+    std::shared_ptr<ListNode<T>> List<T>::remove_after(const std::shared_ptr<ListNode<T>> &previousPointer)
     {
         std::shared_ptr<ListNode<T>> toRemove = previousPointer->next;
         if (toRemove == nullptr)
@@ -31,8 +32,6 @@ namespace ProjectAlpha{
         toRemove->next = nullptr;
         return toRemove;
     }
-
-
 
     template <class T>
     std::shared_ptr<ListNode<T>> List<T>::remove_front()
@@ -43,7 +42,7 @@ namespace ProjectAlpha{
         head = head->next;
         toRemove->next = nullptr;
     }
- template <class T>
+    template <class T>
     void List<T>::print() const
     {
         std::shared_ptr<ListNode<T>> current = head;
@@ -54,5 +53,5 @@ namespace ProjectAlpha{
         }
         std::cout << "null" << std::endl;
     }
-   
+
 }
