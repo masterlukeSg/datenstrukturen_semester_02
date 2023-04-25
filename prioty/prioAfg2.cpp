@@ -1,4 +1,5 @@
 #include "../prioty/priorityqueue.hpp"
+#include "../prioty/priorutyqueue.ipp"
 #include <string>
 // clang++ -std=c++17 -I./include priorityqueue.cpp prioAfg2.cpp -o p
 
