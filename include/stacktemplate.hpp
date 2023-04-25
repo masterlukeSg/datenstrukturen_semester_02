@@ -13,8 +13,8 @@ namespace ProjectAlpha{
         public:
 
         
-        virtual int size()=0;
-        virtual void add(const T& data)=0;
+        virtual int getsize()=0;
+        virtual void add(T)=0;
         virtual T pop()=0;
 
     };
