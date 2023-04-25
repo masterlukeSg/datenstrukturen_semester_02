@@ -10,7 +10,7 @@ public:
   ListNode(T data) : data_(data), next(nullptr) {}
 
 
-public:
+private:
   std::shared_ptr<ListNode<T>> next;
   
   T data_;
