@@ -88,6 +88,12 @@ template <class T>
         return n->next;
     }
     
+    template <class T>
+    // returns the previous pointer of the given pointer
+    std::weak_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::prev(const std::shared_ptr<DoublyLinkedListNode<T>> n) const{
+        return n->prev;
+    }
+    
     
 
 }
