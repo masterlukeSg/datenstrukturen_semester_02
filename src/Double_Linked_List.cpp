@@ -45,5 +45,25 @@ template <class T>
 
         return head;
     }
-
+template <class T>
+    // inserting given integer after the given pointer
+    std::shared_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::insert_after(const std::shared_ptr<DoublyLinkedListNode<T>> prev, T x){
+        if (prev == nullptr) { // given node can not be a nullptr
+            std::cout << "the node does not exist" << std::endl;
+            return nullptr;
+        }
+        if (head == nullptr){ //if the list is empty then a new head is created
+            insert_front(x);
+            return head;
+        }
+        std::shared_ptr<DoublyLinkedListNode<T>> new_node = std::make_shared<DoublyLinkedListNode<T>>(x);
+        new_node->prev = prev; // changing previous node of the new node to prev
+        new_node->next = prev->next; // changing next node to the next node of prev
+        prev->next = new_node; // changing next node of prev to the new node
+        if (new_node->next != nullptr){
+            new_node->next->prev = new_node; // changing previous node of next node to the new node
+        }
+        return new_node;
+    }
+    
 }
