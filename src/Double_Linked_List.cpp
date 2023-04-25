@@ -66,4 +66,24 @@ template <class T>
         return new_node;
     }
     
+template <class T>
+    // removing given pointer
+    std::shared_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::remove(const std::shared_ptr<DoublyLinkedListNode<T>> n){
+        if (n->next == nullptr){ // if the list ends after the given pointer nothing can be removed
+            return nullptr;
+        }
+        // if given pointer is the head then the next node is the new head pointer
+        if (n == head){
+           head = head->next;
+           return head;
+        }
+        n->next->prev = n->prev; // changing prev pointer of next pointer to previous pointer of given pointer
+        (n->prev.lock())->next = n->next; // changing next pointer of previous given pointer to next pointer of given pointer
+        return n->next;
+    }
+     
+    
 }
+
+
+
