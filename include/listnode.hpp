@@ -1,21 +1,21 @@
 #pragma once
 #include <memory>
 
-namespace Datenstrukturen {
+
+namespace ProjectAlpha {
 
 template <class T>
 class ListNode{
 public:
-  ListNode(T data);
+  ListNode(T data) : data_(data), next(nullptr) {}
 
 
 public:
-  std::shared_ptr<ListNode> next;
+  std::shared_ptr<ListNode<T>> next;
   
-  auto data_;
+  T data_;
 };
 
 
-typedef std::shared_ptr<ListNode> ListNodeptr;
 
 }
