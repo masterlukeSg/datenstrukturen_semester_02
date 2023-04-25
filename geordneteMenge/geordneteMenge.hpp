@@ -1,17 +1,15 @@
 #include <iostream>
+#include <geordneteMengeTemplate.hpp>
 
 namespace ProjectAlpha
 {
 
-    template <class X>
-    class gerodneteMenge
+    template <class K>
+    class gerodneteMenge : public gerodneteMengeTemplate<class K>
     {
-        virtual void insert(K) = 0;
-        virtual bool find(K) = 0;
-        virtual remove(K) = 0;
-
-        
-
+        void insert(K) override;
+        bool find(K) override;
+        remove(K) override;
     };
 
 }
