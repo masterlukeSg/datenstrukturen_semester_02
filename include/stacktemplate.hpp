@@ -14,10 +14,8 @@ namespace ProjectAlpha{
 
         
         virtual int size()=0;
-        virtual void add(T)=0;
-        virtual auto pop()=0;
-        virtual auto peek()=0;
-        virtual bool isempty()=0;
+        virtual void add(const T& data)=0;
+        virtual T pop()=0;
 
     };
 
