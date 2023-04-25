@@ -1,6 +1,9 @@
 #pragma once 
 #include <iostream>
-#include <stacktemplate.hpp>
+#include "../include/stacktemplate.hpp"
+#include "../include/list.hpp"
+#include "../include/listnode.hpp"
+#include "../src/linkedlist.cpp"
 
 namespace ProjectAlpha {
 
@@ -9,17 +12,19 @@ namespace ProjectAlpha {
     class stack : public stacktemplate<T> {
         public :
 
-            stack();
+            stack(){}
+
             int size() override;
-            void add(T) override;
-            auto pop() override;
-            auto peek()override;
+            void add(const T& data) override;
+            T pop() override;
+            T peek()override;
             bool isempty() override;
 
         private :
+        
+            List<T> list; 
 
-            int s_size;
-
+            
     };
      
 }
