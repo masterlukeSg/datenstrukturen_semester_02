@@ -4,17 +4,21 @@
 
 namespace ProjectAlpha {
 
-    template <T>
+    template <class T>
+
     class stack : public stacktemplate<T> {
         public :
-            
-            int size();
-            void add(T);
-            auto pop();
+
+            stack();
+            int size() override;
+            void add(T) override;
+            auto pop() override;
+            auto peek()override;
+            bool isempty() override;
 
         private :
 
-            int size;
+            int s_size;
 
     };
      
