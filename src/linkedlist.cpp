@@ -12,6 +12,27 @@ namespace ProjectAlpha{
         head = newPointer;
         return newPointer;
     }
+ template <class T>
+    std::shared_ptr<ListNode<T>> List<T>::insert_after(const std::shared_ptr<ListNode<T>>& previousPointer, T x)
+    {
+        std::shared_ptr<ListNode<T>> newPointer = std::make_shared<ListNode<T>>(x);
+        newPointer->next = previousPointer->next;
+        previousPointer->next = newPointer;
+        return newPointer;
+    }
+
+    template <class T>
+    std::shared_ptr<ListNode<T>> List<T>::remove_after(const std::shared_ptr<ListNode<T>>& previousPointer)
+    {
+        std::shared_ptr<ListNode<T>> toRemove = previousPointer->next;
+        if (toRemove == nullptr)
+            return nullptr;
+        previousPointer->next = toRemove->next;
+        toRemove->next = nullptr;
+        return toRemove;
+    }
+
+
 
    
 }
