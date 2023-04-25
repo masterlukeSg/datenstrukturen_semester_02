@@ -6,5 +6,5 @@ using namespace ProjectAlpha;
 int main()
 {
     HashendeMengeRealisation n;
-    n.insert(5);
+    n.insert("5");
 }

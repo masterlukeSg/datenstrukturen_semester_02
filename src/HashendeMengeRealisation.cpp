@@ -1,25 +1,26 @@
 #include <iostream>
-#include "../include/HashendeMengeRealisation.hpp"
+#include <../include/HashendeMengeRealisation.hpp>
+#include <string>
 
-void HashendeMengeRealisation::insert(int t)
+void HashendeMengeRealisation::insert(std::string s)
 {
 
     std::cout << "halo";
 
 }
 
-bool HashendeMengeRealisation::find(int f){
+bool HashendeMengeRealisation::find(std::string s) {
 
     return false;
 }
 
-void HashendeMengeRealisation::remove(int t){
+void HashendeMengeRealisation::remove(std::string s){
 
     //none
 
 }
 
 
-void HashendeMengeRealisation::belegungsfaktor(int){
+void HashendeMengeRealisation::belegungsfaktor(std::string s){
 
 } 
