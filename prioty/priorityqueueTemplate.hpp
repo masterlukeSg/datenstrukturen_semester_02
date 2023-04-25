@@ -4,13 +4,11 @@
 namespace ProjectAlpha
 {
     template <class T, class priority>
-
-    class priorityqueueTemplate
+    class PriorityqueueTemplate
     {
 
     public:
         virtual int get_size() = 0;
-        virtual Iterator get_Iter() = 0;
         virtual void insert(T, priority) = 0;
         virtual T extract_top() = 0;
     };
