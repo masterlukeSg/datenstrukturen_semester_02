@@ -34,5 +34,15 @@ namespace ProjectAlpha{
 
 
 
+    template <class T>
+    std::shared_ptr<ListNode<T>> List<T>::remove_front()
+    {
+        if (!head)
+            return nullptr;
+        std::shared_ptr<ListNode<T>> toRemove = head;
+        head = head->next;
+        toRemove->next = nullptr;
+    }
+
    
 }
