@@ -22,5 +22,10 @@ namespace ProjectAlpha{
     std::shared_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::get_first() const{
         return head;
     }
+template <class T>
+    // returns last node of the current list (tail)
+    std::shared_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::get_last() const{
+        return tail;
+    }
+    }
 
-}
