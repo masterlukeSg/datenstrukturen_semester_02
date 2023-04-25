@@ -1,7 +1,8 @@
 #include <iostream>
 #include "HashendeMenge.hpp"
 #include <string>
-#include <List>
+#include "../include/list.hpp"
+#include <vector>
 #include <functional>
 
 using namespace ProjectAlpha;
@@ -19,7 +20,7 @@ private:
     size_t num_buckets;
 
     // ToDO: List von AIcha implementieren
-    //std::vector<List> buckets;
+    std::vector<List<std::string>> buckets;
 
 public:
     // Konstruktor
@@ -33,7 +34,7 @@ public:
 
     // Element entfernen
     void remove(std::string) override;
-   
+
     // Druckt alle Elemente der Hashtable
     void print() const;
 
