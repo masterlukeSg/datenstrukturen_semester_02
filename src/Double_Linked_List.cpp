@@ -82,7 +82,14 @@ template <class T>
         return n->next;
     }
      
+    template <class T>
+    // returns the next pointer of the given pointer
+    std::shared_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::next(const std::shared_ptr<DoublyLinkedListNode<T>> n) const{
+        return n->next;
+    }
     
+    
+
 }
 
 
