@@ -14,12 +14,12 @@ namespace ProjectAlpha {
 
             stack(){}
 
-            int size() override;
+            int getsize() override;
             void add(const T& data) override;
             T pop() override;
             T peek()override;
             bool isempty() override;
-            
+
 
         private :
         
