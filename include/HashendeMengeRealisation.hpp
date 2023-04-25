@@ -1,6 +1,8 @@
 #include <iostream>
 #include "HashendeMenge.hpp"
 #include <string>
+#include <List>
+#include <functional>
 
 using namespace ProjectAlpha;
 
@@ -17,12 +19,11 @@ private:
     size_t num_buckets;
 
     // ToDO: List von AIcha implementieren
-    // std::vector<List> buckets;
+    //std::vector<List> buckets;
 
 public:
     // Konstruktor
     HashendeMengeRealisation();
-
     // Element einfügen
     void insert(std::string) override;
 

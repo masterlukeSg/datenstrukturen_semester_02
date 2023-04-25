@@ -12,5 +12,5 @@ namespace ProjectAlpha{
         virtual Iterator get_Iter()=0;
         virtual void insert(T,priority)=0;
         virtual T extract_top()=0;
-    }
+    };
 }
