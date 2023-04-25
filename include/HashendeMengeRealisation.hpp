@@ -1,18 +1,16 @@
 #include <iostream>
 #include "HashendeMenge.hpp"
 
-namespace ProjectAlpha
+using namespace ProjectAlpha;
+
+class HashendeMengeRealisation : public HashendeMenge<int>
 {
-
-    template <class K>
-    class HashendeMengeRealisation : public HashendeMenge <K>
-    {
-    private:
-        /* data */
-    public:
-        HashendeMengeRealisation();
-        void insert(K) override;
-        
-    };
-
-}
+private:
+    /* data */
+public:
+    void insert(int) override;
+    bool find(int) override;
+    void remove(int) override;
+    // Belegungsfaktor wird errechnet, um die Buckets gleichmßig zu füllen
+    void belegungsfaktor(int) override;
+};
