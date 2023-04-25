@@ -1,9 +1,11 @@
 #include <iostream>
 #include <../include/HashendeMengeRealisation.hpp>
 #include <string>
+#include "../include/list.hpp"
 
-HashendeMengeRealisation::HashendeMengeRealisation()
+HashendeMengeRealisation::HashendeMengeRealisation(): hashfkt(std::hash<std::string>()), num_buckets(32)
 {
+     buckets = std::vector<List<std::string>>(num_buckets);
 }
 void HashendeMengeRealisation::insert(std::string s)
 {
