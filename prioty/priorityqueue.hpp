@@ -1,3 +1,4 @@
+#pragma once 
 #include "priorityqueueTemplate.hpp"
 #include <vector>
 #include <memory>
