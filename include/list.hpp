@@ -2,27 +2,28 @@
 #include <memory>
 #include "../include/listnode.hpp"
 
-namespace Datenstrukturen {
+namespace ProjectAlpha {
 
 template <class T> 
 class List{
-public:
-  List();
+    public:
+    List(): head(nullptr) {}
 
-  // Insert and delete Nodes
-  ListNodeptr insert_front(T x);
-  ListNodeptr insert_after(const ListNodeptr&, T x);
-  ListNodeptr remove_front();
-  ListNodeptr remove_after(const ListNodeptr&);
+    // Insert and delete Nodes
+    std::shared_ptr<ListNode<T>> insert_front(T);
+    std::shared_ptr<ListNode<T>> remove_front();
+    std::shared_ptr<ListNode<T>> gethead();
+    int size(); //fehler behoben bei der size funktion
 
-  // Get the next Node of the current List
-  ListNodeptr next(const ListNodeptr&);
+    // Get the next Node of the current List
+    std::shared_ptr<ListNode<T>> next(const std::shared_ptr<ListNode<T>>&);
 
-  // Print the current List
-  void print() const;
+    // Print the current List
+    void print() const;
 
-private:
-  ListNodeptr head;
+    private:
+    std::shared_ptr<ListNode<T>> head;
 };
+
 
 }
