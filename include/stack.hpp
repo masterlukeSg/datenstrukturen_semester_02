@@ -3,22 +3,24 @@
 #include "../include/stacktemplate.hpp"
 #include "../include/list.hpp"
 #include "../include/listnode.hpp"
-#include "../src/linkedlist.cpp"
+#include "../src/linkedlist.ipp"
+
 
 namespace ProjectAlpha {
 
-    template <class T>
 
+    template<class T>
     class stack : public stacktemplate<T> {
         public :
 
-            stack(){}
+            stack();
 
             int getsize() override;
-            void add(const T& data) override;
+            void add(T) override;
             T pop() override;
-            T peek()override;
-            bool isempty() override;
+            T peek();
+            bool isempty();
+            void stackDisplay();
 
 
         private :
@@ -27,5 +29,6 @@ namespace ProjectAlpha {
 
             
     };
-     
+// habe jz die template implementierung in eine ipp datei hinzugefügt anstatt das jz in der header datei zu machen
+   
 }
