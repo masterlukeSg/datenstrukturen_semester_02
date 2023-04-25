@@ -6,11 +6,11 @@ namespace ProjectAlpha {
 
 template <class T>
 class ListNode{
-public:
+public::
   ListNode(T data) : data_(data), next(nullptr) {}
 
 
-private:
+
   std::shared_ptr<ListNode<T>> next;
   
   T data_;
