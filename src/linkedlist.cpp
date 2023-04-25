@@ -43,6 +43,16 @@ namespace ProjectAlpha{
         head = head->next;
         toRemove->next = nullptr;
     }
-
+ template <class T>
+    void List<T>::print() const
+    {
+        std::shared_ptr<ListNode<T>> current = head;
+        while (current)
+        {
+            std::cout << current->data_ << " - > ";
+            current = current->next;
+        }
+        std::cout << "null" << std::endl;
+    }
    
 }
