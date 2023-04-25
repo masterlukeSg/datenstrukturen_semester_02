@@ -93,6 +93,18 @@ template <class T>
     std::weak_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::prev(const std::shared_ptr<DoublyLinkedListNode<T>> n) const{
         return n->prev;
     }
+
+    template <class T>
+    // prints the current list
+    void DoublyLinkedList<T>::print() const {
+        std::shared_ptr<DoublyLinkedListNode<T>> iterator_node = head; //creating an iterator that starts at the head
+        // prints out data of the node until iterator is a nullptr
+        while(iterator_node){
+            std::cout << iterator_node->data_ << " -> ";
+            iterator_node = iterator_node -> next;
+        }
+        std::cout << "null" << std::endl;
+    }
     
     
 
