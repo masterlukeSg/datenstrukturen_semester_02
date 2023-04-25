@@ -14,8 +14,8 @@ namespace ProjectAlpha{
 
         
         virtual int getsize()=0;
-        virtual void add(T)=0;
-        virtual T pop()=0;
+        virtual void push(T)=0;
+        virtual T remove()=0;
 
     };
 

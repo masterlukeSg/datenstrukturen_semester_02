@@ -16,8 +16,8 @@ namespace ProjectAlpha {
             stack();
 
             int getsize() override;
-            void add(T) override;
-            T pop() override;
+            void push(T) override;
+            T remove() override;
             T peek();
             bool isempty();
             void stackDisplay();
