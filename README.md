@@ -1,20 +1,24 @@
 # Zettel0
 
 Arbeitsaufteilung
-    Aufgabe 1: 
-        Stack -> Imen 
-        Queue -> Imen
+    Aufgabe 1: Interface + UML
+        Stack -> Imene
+        Queue -> Imene
         Einfach verkettete Liste -> Aicha
         Doppelt verkettete Liste -> Aicha
         Priority Queue -> Aicha
         Hashende Menge -> Lukas
         Geordnete Menge -> Lukas 
 
+    Aufgabe 2: Implementierung
+        Stack -> Imene
+        Queue -> Imene
+        Einfach verkettete Liste -> Aicha
+        Doppelt verkettete Liste -> Aicha
+        Priority Queue -> Lukas
+        Hashende Menge -> Lukas
 
-
-
-
-
+    
 
 
 
