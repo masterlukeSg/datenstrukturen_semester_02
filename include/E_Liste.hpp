@@ -13,12 +13,12 @@ namespace ProjectAlpha {
 
          E_Liste(); 
          int get_size();
-         node get_head();
-         node get_next(predecessor);
+         std::shared_ptr<ListNode<T>> get_head();
+         std::shared_ptr<ListNode<T>> get_next(std::shared_ptr<ListNode<T>>);
          void insert_front(T);
          void remove_front(T);
-         void insert_after(predecessor,T);
-         void remove_after(predecessor);
+         void insert_after(std::shared_ptr<ListNode<T>>,T);
+         void remove_after(std::shared_ptr<ListNode<T>>);
 
 
     };
