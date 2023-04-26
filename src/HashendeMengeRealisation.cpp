@@ -26,7 +26,7 @@ namespace ProjectAlpha
 
         else
         {
-            // belegungsfaktor();
+            belegungsfaktor();
             insert(s);
         }
     }
@@ -40,8 +40,29 @@ namespace ProjectAlpha
 
     void HashendeMengeRealisation::remove(std::string s)
     {
+        // gibt es das element
+        if (!find(s))
+            return;
+        int buket = hashfkt(s) % num_buckets;
+        ListNodeptr current = buckets[buket].get_head();
 
-        // none
+        // zu entfernende element ist head
+        std::cout << "geklappt";
+        if (current->data_ == s)
+        {
+            buckets[buket].remove_front();
+            return;
+        }
+
+        // da das erste element oben schon gelöscht wird, klappt die Schleife
+        ListNodeptr vorC = current;
+        while (current)
+        {
+            if (current->data_ == s)
+                buckets[buket].remove_after(vorC);
+            vorC = current;
+            current = vorC->next;
+        }
     }
 
     /*
@@ -74,6 +95,5 @@ namespace ProjectAlpha
 
         for (const std::string &wort : zwischenspeicher)
             insert(wort);
-
     }
 }
