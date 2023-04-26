@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "HashendeMenge.hpp"
 #include <string>
@@ -16,7 +17,7 @@ namespace ProjectAlpha
         // Um den Bucket eines Elements x zu finden
         // kann die Hashfkt wie folgt verwendet werden
         //   hashfkt(x) % num_buckets;
-        const std::function<size_t(const T&)> hashfkt;
+        const std::function<size_t(const T &)> hashfkt;
 
         // Die aktuelle Anzahl der Buckets
         size_t num_buckets;

@@ -1,6 +1,6 @@
 #pragma once
 #include <memory>
-#include "../include/listnode.hpp"
+#include "listnode.hpp"
 
 namespace ProjectAlpha
 {
@@ -12,6 +12,7 @@ namespace ProjectAlpha
         List() : head(nullptr) {}
 
         // Insert and delete Nodes
+        std::shared_ptr<ListNode<T>> get_head() const;
         std::shared_ptr<ListNode<T>> insert_front(T x);
         std::shared_ptr<ListNode<T>> insert_after(const std::shared_ptr<ListNode<T>> &, T x);
         std::shared_ptr<ListNode<T>> remove_front();
@@ -27,6 +28,6 @@ namespace ProjectAlpha
         std::shared_ptr<ListNode<T>> head;
     };
 
-    #include "linkedlist.ipp"
+
 
 }

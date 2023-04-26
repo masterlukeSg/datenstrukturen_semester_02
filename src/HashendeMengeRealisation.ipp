@@ -7,13 +7,14 @@
 
 namespace ProjectAlpha
 {
-
-    HashendeMengeRealisation::HashendeMengeRealisation() : hashfkt(std::hash<std::string>()), num_buckets(32)
+    template <class T>
+    HashendeMengeRealisation<T>::HashendeMengeRealisation() : hashfkt(std::hash<T>()), num_buckets(32)
     {
-        buckets = std::vector<List<std::string>>(num_buckets);
+        buckets = std::vector<List<T>>(num_buckets);
     }
-
-    void HashendeMengeRealisation::insert(std::string s)
+    
+    template <class T>
+    void HashendeMengeRealisation<T>::insert(T s)
     {
         if (find(s))
             return;
@@ -30,27 +31,28 @@ namespace ProjectAlpha
             insert(s);
         }
     }
-
-    bool HashendeMengeRealisation::find(std::string s)
+    template <class T>
+    bool HashendeMengeRealisation<T>::find(T s)
     {
-        int buket = hashfkt(x) % num_buckets;
-        ListNodeptr current = buckets[buket].get_head();
+        int buket = hashfkt(s) % num_buckets;
+        std::shared_ptr<ListNode<T>> current = buckets[buket].get_head();
         while (current)
         {
-            if (current->data_ == x)
+            if (current->data_ == s)
                 return true;
             current = current->next;
         }
         return false;
     }
 
-    void HashendeMengeRealisation::remove(std::string s)
+    template <class T>
+    void HashendeMengeRealisation<T>::remove(T s)
     {
         // gibt es das element
         if (!find(s))
             return;
         int buket = hashfkt(s) % num_buckets;
-        ListNodeptr current = buckets[buket].get_head();
+        std::shared_ptr<ListNode<T>> current = buckets[buket].get_head();
 
         // zu entfernende element ist head
         std::cout << "geklappt";
@@ -61,7 +63,7 @@ namespace ProjectAlpha
         }
 
         // da das erste element oben schon gelöscht wird, klappt die Schleife
-        ListNodeptr vorC = current;
+        std::shared_ptr<ListNode<T>> vorC = current;
         while (current)
         {
             if (current->data_ == s)
@@ -71,13 +73,13 @@ namespace ProjectAlpha
         }
     }
 
-    
-    size_t HashendeMengeRealisation::size()
+    template <class T>
+    size_t HashendeMengeRealisation<T>::size()
     {
         int j = 0;
         for (int i = 0; i < num_buckets; i++)
         {
-            ListNodeptr current = buckets[i].get_head();
+            std::shared_ptr<ListNode<T>> current = buckets[i].get_head();
             while (current)
             {
                 j++;
@@ -87,20 +89,22 @@ namespace ProjectAlpha
         return j;
     }
 
-    void HashendeMengeRealisation::print()
+    template <class T>
+    void HashendeMengeRealisation<T>::print()
     {
         for (int i = 0; i < num_buckets; i++)
             buckets[i].print_Liste();
     }
-    
-    void HashendeMengeRealisation::belegungsfaktor()
+
+    template <class T>
+    void HashendeMengeRealisation<T>::belegungsfaktor()
     {
 
-        std::vector<std::string> zwischenspeicher;
+        std::vector<T> zwischenspeicher;
 
         for (int i = 0; i < num_buckets; i++)
         {
-            ListNodeptr current = buckets[i].get_head();
+            std::shared_ptr<ListNode<T>> current = buckets[i].get_head();
             while (current)
             {
                 zwischenspeicher.push_back(current->data_);
@@ -109,9 +113,9 @@ namespace ProjectAlpha
         }
 
         num_buckets = num_buckets * 2;
-        buckets = std::vector<List>(num_buckets);
+        buckets = std::vector<List<T>>(num_buckets);
 
-        for (const std::string &wort : zwischenspeicher)
+        for (const T &wort : zwischenspeicher)
             insert(wort);
     }
 }
