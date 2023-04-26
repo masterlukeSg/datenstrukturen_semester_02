@@ -1,6 +1,6 @@
 
-#include <include/Doubly_Linked_List.hpp>
-#include <include/Doubly_Linked_Listnode.hpp>
+#include <Doubly_Linked_List.hpp>
+#include <Doubly_Linked_Listnode.hpp>
 
 
 //
@@ -9,32 +9,31 @@
  using namespace ProjectAlpha;
 
 int main (){
-// creating a list
   DoublyLinkedList<int> Liste;
-  const std::shared_ptr<DoublyLinkedListNode<int>> current;
+  DListNodeptr current;
 
   // prints the (empty) list
   Liste.print();
 
   // inserting 10, 30, 50 at the beginning of the list and printing it
   Liste.insert_front(10);
-  current == Liste.insert_front(30);
+  current = Liste.insert_front(30);
   Liste.insert_front(50);
   Liste.print();
 
   // inserting 200 after 30, 100 after 30, 500 after 100 and printing it
   Liste.insert_after(current, 200);
-  current == Liste.insert_after(current, 100);
+  current = Liste.insert_after(current, 100);
   Liste.insert_after(current, 500);
   Liste.print();
 
   // removing 50 and printing it
-  current == Liste.get_first();
+  current = Liste.get_first();
   Liste.remove(current);
   Liste.print();
 
   // removing 500 and printing it
-  current == Liste.get_first()->next->next;
+  current = Liste.get_first()->next->next;
   Liste.remove(current);
   Liste.print();
 
@@ -42,6 +41,7 @@ int main (){
   Liste.remove(current->next->next);
   Liste.print();
 }
+
 
 
   
