@@ -14,11 +14,11 @@ namespace ProjectAlpha
         Priorityqueue();
         int get_size() override;
         void insert(T, priority) override;
-        T extract_top() override;
+       // T extract_top() override;
 
     private:
-        std::list<T> queue;
-        std::list<priority> prioList;
+        std::vector<T> queue;
+        std::vector<priority> prioList;
 
 
     

@@ -31,10 +31,15 @@ namespace ProjectAlpha
         }
     }
 
-    template <class T, class priority>
+    /*template <class T, class priority>
     T Priorityqueue<T,priority>:: extract_top(){
-        return queue.pop_front();
+        T beginn = queue.begin();
+        prioList.erase(prioList.begin());
+        queue.erase(queue.begin());
+        return queue.front();
+
     }
+    */
 
 
 
