@@ -1,7 +1,9 @@
 #pragma once 
 #include "priorityqueueTemplate.hpp"
 #include <vector>
+#include <iostream>
 #include <memory>
+#include <list>
 namespace ProjectAlpha
 {
     template <class T, class priority>
@@ -10,14 +12,13 @@ namespace ProjectAlpha
 
     public:
         Priorityqueue();
-        int get_size() override{
-
-        }
+        int get_size() override;
         void insert(T, priority) override;
         T extract_top() override;
 
     private:
-        std::vector<T> queue;
+        std::list<T> queue;
+        std::list<priority> prioList;
 
 
     
