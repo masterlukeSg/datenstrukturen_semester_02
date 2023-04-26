@@ -1,9 +1,9 @@
+#pragma once
 #include "../include/priorityqueue.hpp"
 #include <iostream>
 #include <vector>
 #include <memory>
 #include <list>
-#include "priorityqueue.hpp"
 
 namespace ProjectAlpha
 {
