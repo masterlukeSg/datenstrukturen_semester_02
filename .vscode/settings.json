@@ -62,6 +62,7 @@
         "compare": "cpp",
         "concepts": "cpp",
         "algorithm": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "*.ipp": "cpp"
     }
 }

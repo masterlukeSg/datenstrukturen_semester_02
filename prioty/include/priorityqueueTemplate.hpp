@@ -9,6 +9,6 @@ namespace ProjectAlpha
     public:
         virtual int get_size() = 0;
         virtual void insert(T, priority) = 0;
-        virtual T extract_top() = 0;
-    };
+        //virtual T extract_top() = 0;
+        };
 }

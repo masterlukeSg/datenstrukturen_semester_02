@@ -1,27 +1,31 @@
 #include <iostream>
-#include <geordneteMenge.hpp>
+#include "../geordneteMenge/geordneteMenge.hpp"
 #include <vector>
 
 namespace ProjectAlpha
 {
 
-    template <class K>
-    class gerodneteMenge : public gerodneteMengeTemplate<class K >
-    {   
-        gerodneteMenge(){
-            queue = std::vector<K>;
-        }
+    /*template <class K>
+    class gerodneteMenge : public gerodneteMengeTemplate< K > // ich würde hier wieder nur namespace benutzen anstatt jz class wieder neu zu definieren 
+    {  */ 
 
-        void insert(K) override
+         //vergiss auch nicht cpp datei zu ipp datei zu ändern 
+        template <class K>
+        geordneteMenge<K>::geordneteMenge(){
+            //queue = std::vector<K>; //queue wurde hier nicht deklariert ist nicht besser std::vector<K> queue;
+            std::vector<K> queue;
+        }
+        template <class K>
+        void geordneteMenge<K>::insert(K) 
         {
         }
-
-        bool find(K) override
+        template<class K>
+        bool geordneteMenge<K>::find(K) 
         {
         }
-
-        remove(K) override
+        template <class K> 
+         void geordneteMenge<K>::remove(K)   
         {
         }
-    };
+    //};
 }
