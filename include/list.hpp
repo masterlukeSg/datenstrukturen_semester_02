@@ -12,11 +12,11 @@ namespace ProjectAlpha
         List() : head(nullptr) {}
 
         // Insert and delete Nodes
-        std::shared_ptr<ListNode<T>> get_head() const;
-        std::shared_ptr<ListNode<T>> insert_front(T x);
-        std::shared_ptr<ListNode<T>> insert_after(const std::shared_ptr<ListNode<T>> &, T x);
-        std::shared_ptr<ListNode<T>> remove_front();
-        std::shared_ptr<ListNode<T>> remove_after(const std::shared_ptr<ListNode<T>> &);
+        std::shared_ptr<ListNode<T> > get_head() const;
+        std::shared_ptr<ListNode<T> > insert_front(T x);
+        std::shared_ptr<ListNode<T> > insert_after(const std::shared_ptr<ListNode<T> > &, T x);
+        std::shared_ptr<ListNode<T> > remove_front();
+        std::shared_ptr<ListNode<T> > remove_after(const std::shared_ptr<ListNode<T> > &);
 
         // Get the next Node of the current List
         // std::shared_ptr<ListNode<T>> next(const std::shared_ptr<ListNode<T>> &);
@@ -25,7 +25,7 @@ namespace ProjectAlpha
         void print() const;
 
     private:
-        std::shared_ptr<ListNode<T>> head;
+        std::shared_ptr<ListNode<T> > head;
     };
 
 

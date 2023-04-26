@@ -11,11 +11,11 @@ namespace ProjectAlpha
   public:
     ListNode(T data) : data_(data), next(nullptr) {}
 
-    std::shared_ptr<ListNode<T>> next;
+    std::shared_ptr<ListNode<T> > next;
 
     T data_;
   };
 
-  typedef std::shared_ptr<ListNode<std::string>> ListNodeptr;
+  typedef std::shared_ptr<ListNode<std::string> > ListNodeptr;
 
 }

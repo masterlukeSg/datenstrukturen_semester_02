@@ -23,20 +23,20 @@ namespace ProjectAlpha
         size_t num_buckets;
 
         // ToDO: List von AIcha implementieren
-        std::vector<List<T>> buckets;
+        std::vector<List<T> > buckets;
 
     public:
         // Konstruktor
         HashendeMengeRealisation();
         // Element einfügen
-        void insert(T) override;
+        void insert(T);
 
         // Gibt genau dann true zurück,
         // wenn das Element in der Hashtable enthalten ist
-        bool find(T) override;
+        bool find(T);
 
         // Element entfernen
-        void remove(T) override;
+        void remove(T);
 
         // Druckt alle Elemente der Hashtable
         void print();
@@ -44,6 +44,6 @@ namespace ProjectAlpha
         // Gibt Anzahl der Elemente zurück
         size_t size();
         // Belegungsfaktor wird errechnet, um die Buckets gleichmßig zu füllen
-        void belegungsfaktor() override;
+        void belegungsfaktor();
     };
 }

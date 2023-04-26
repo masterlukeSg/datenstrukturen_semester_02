@@ -1,5 +1,5 @@
 #include <iostream>
-#include <../include/HashendeMengeRealisation.hpp>
+#include "../include/HashendeMengeRealisation.hpp"
 #include <string>
 #include "../include/list.hpp"
 #include <vector>
@@ -10,7 +10,7 @@ namespace ProjectAlpha
     template <class T>
     HashendeMengeRealisation<T>::HashendeMengeRealisation() : hashfkt(std::hash<T>()), num_buckets(32)
     {
-        buckets = std::vector<List<T>>(num_buckets);
+        buckets = std::vector<List<T> >(num_buckets);
     }
     
     template <class T>
@@ -35,7 +35,7 @@ namespace ProjectAlpha
     bool HashendeMengeRealisation<T>::find(T s)
     {
         int buket = hashfkt(s) % num_buckets;
-        std::shared_ptr<ListNode<T>> current = buckets[buket].get_head();
+        std::shared_ptr<ListNode<T> > current = buckets[buket].get_head();
         while (current)
         {
             if (current->data_ == s)
@@ -52,7 +52,7 @@ namespace ProjectAlpha
         if (!find(s))
             return;
         int buket = hashfkt(s) % num_buckets;
-        std::shared_ptr<ListNode<T>> current = buckets[buket].get_head();
+        std::shared_ptr<ListNode<T> > current = buckets[buket].get_head();
 
         // zu entfernende element ist head
         std::cout << "geklappt";
@@ -63,7 +63,7 @@ namespace ProjectAlpha
         }
 
         // da das erste element oben schon gelöscht wird, klappt die Schleife
-        std::shared_ptr<ListNode<T>> vorC = current;
+        std::shared_ptr<ListNode<T> > vorC = current;
         while (current)
         {
             if (current->data_ == s)
@@ -79,7 +79,7 @@ namespace ProjectAlpha
         int j = 0;
         for (int i = 0; i < num_buckets; i++)
         {
-            std::shared_ptr<ListNode<T>> current = buckets[i].get_head();
+            std::shared_ptr<ListNode<T> > current = buckets[i].get_head();
             while (current)
             {
                 j++;
@@ -104,7 +104,7 @@ namespace ProjectAlpha
 
         for (int i = 0; i < num_buckets; i++)
         {
-            std::shared_ptr<ListNode<T>> current = buckets[i].get_head();
+            std::shared_ptr<ListNode<T> > current = buckets[i].get_head();
             while (current)
             {
                 zwischenspeicher.push_back(current->data_);
@@ -113,9 +113,9 @@ namespace ProjectAlpha
         }
 
         num_buckets = num_buckets * 2;
-        buckets = std::vector<List<T>>(num_buckets);
+        buckets = std::vector<List<T> >(num_buckets);
 
-        for (const T &wort : zwischenspeicher)
+        for (const T &wort: zwischenspeicher)
             insert(wort);
     }
 }
