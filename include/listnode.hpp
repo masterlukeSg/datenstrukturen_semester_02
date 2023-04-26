@@ -11,9 +11,9 @@ public::
 
 
 
-  std::shared_ptr<ListNode<T>> next;
+  std::shared_ptr<ListNode<T>> next;//attribute hier sind public, da stack auf die zugreifen soll
   
-  T data_;
+  T data_; //da liste in stack wiederum privat stellt es kein problem 
 };
 
 
