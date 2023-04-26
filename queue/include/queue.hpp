@@ -1,8 +1,9 @@
 #pragma once 
 #include <iostream>
-#include "../queue/include/queueinterface.hpp"
-#include "../queue/include/doublylinkedlist.hpp"
-#include "../queue/include/dllistnode.hpp"
+#include "../include/queueinterface.hpp"
+#include "../include/doublylinkedlist.hpp"
+#include "../include/dllistnode.hpp"
+#include "../src/doublylinkedlist.ipp"
 
 namespace ProjectAlpha{
 

@@ -1,6 +1,7 @@
-#include "../queue/include/dllistnode.hpp"
-#include "../queue/include/doublylinkedlist.hpp"
+#include "../include/dllistnode.hpp"
+#include "../include/doublylinkedlist.hpp"
 #include <iostream>
+#include <memory>
 
 namespace Datenstrukturen
 {
@@ -76,10 +77,10 @@ namespace Datenstrukturen
         while (current)
         {
 
-            std::cout << current->data_ << " -> ";
+            std::cout << current->data_ << " | ";
             current = current->next;
         }
-        std::cout << "null" << std::endl;
+        std::cout << std::endl;
     }
 
     template < class T> 

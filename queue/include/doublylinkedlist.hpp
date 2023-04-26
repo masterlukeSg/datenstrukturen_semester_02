@@ -2,7 +2,7 @@
 
 #include <memory>
 
-#include "../queue/include/dllistnode.hpp"
+#include "../include/dllistnode.hpp"
 
 namespace Datenstrukturen {
 template<class T>
