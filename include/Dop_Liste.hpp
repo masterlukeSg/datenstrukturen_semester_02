@@ -12,14 +12,14 @@ namespace ProjectAlpha {
         public:
 
          int get_size();
-         node get_head();
-         node get_Tail();
-         successor get_next(Node);
-         predecessor get_prev(Node);
+         std::shared_ptr<DoublyLinkedListNode<T>> get_head();
+         std::shared_ptr<DoublyLinkedListNode<T>> get_Tail();
+         std::shared_ptr<DoublyLinkedListNode<T>> get_next(std::shared_ptr<DoublyLinkedListNode<T>>);
+         std::shared_ptr<DoublyLinkedListNode<T>> get_prev(std::shared_ptr<DoublyLinkedListNode<T>>);
          void insert_front(T);
          void remove_front();
-         void insert_after(predecessor,T);
-         void remove(Node);
+         void insert_after(std::shared_ptr<DoublyLinkedListNode<T>>,T);
+         void remove(std::shared_ptr<DoublyLinkedListNode<T>>);
 
     };
 }
