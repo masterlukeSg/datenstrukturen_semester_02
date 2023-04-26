@@ -56,5 +56,24 @@ namespace ProjectAlpha
     */
     void HashendeMengeRealisation::belegungsfaktor()
     {
+
+        std::vector<std::string> zwischenspeicher;
+
+        for (int i = 0; i < num_buckets; i++)
+        {
+            ListNodeptr current = buckets[i].get_head();
+            while (current)
+            {
+                zwischenspeicher.push_back(current->data_);
+                current = current->next;
+            }
+        }
+
+        num_buckets = num_buckets * 2;
+        buckets = std::vector<List>(num_buckets);
+
+        for (const std::string &wort : zwischenspeicher)
+            insert(wort);
+
     }
 }
