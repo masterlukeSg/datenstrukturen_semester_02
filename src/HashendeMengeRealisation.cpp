@@ -33,9 +33,15 @@ namespace ProjectAlpha
 
     bool HashendeMengeRealisation::find(std::string s)
     {
-        if (s == "4")
-            return false;
-        return true;
+        int buket = hashfkt(x) % num_buckets;
+        ListNodeptr current = buckets[buket].get_head();
+        while (current)
+        {
+            if (current->data_ == x)
+                return true;
+            current = current->next;
+        }
+        return false;
     }
 
     void HashendeMengeRealisation::remove(std::string s)
