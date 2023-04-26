@@ -1,37 +1,39 @@
-#include "Doubly_Linked_List.hpp"
-#include "Doubly_Linked_Listnode.hpp"  
+#include "include/Doubly_Linked_List.hpp"
+#include "include/Doubly_Linked_Listnode.hpp"  
 #include "iostream"  
 
 namespace ProjectAlpha{
-    //template <class T>
-   /* creating a new node with given data and nullptr to next and prev node
-    std::shared_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::DoublyLinkedListNode (T data){
+    
+  template <class T>
+  DoublyLinkedListNode<T>::DoublyLinkedListNode(T data){
         data_ = data;
-    std::shared_ptr<DoublyLinkedListNode<T>> next = nullptr;
-    std::weak_ptr<DoublyLinkedListNode<T>> prev;
-    }*/
+        DListNodeptr next = nullptr;
+        WeakDListNodeptr prev;
+    }
 
-   /* template <class T>
+  template <class T>
     // initializing head and tail (as nullptr)
-    std::shared_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::DoublyLinkedList(){
+    DoublyLinkedList<T>::DoublyLinkedList(){
         head = nullptr;
         tail = nullptr;
-    }*/
-    template <class T>
+    }
+    
+  template <class T>
     // returns first node of the current list (head)
-    std::shared_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::get_first() const{
+    DListNodeptr DoublyLinkedList<T>::get_first() const{
         return head;
     }
-template <class T>
+    
+   template <class T>
     // returns last node of the current list (tail)
-    std::shared_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::get_last() const{
+    DListNodeptr DoublyLinkedList<T>::get_last() const{
         return tail;
     }
     
-    template <class T>
+     template <class T>
     // inserting given integer at the front of the list
-    std::shared_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::insert_front(T x) {
-        std::shared_ptr<DoublyLinkedListNode<T>> new_node = std::make_shared<DoublyLinkedListNode<T>>(x); // creating node
+    DListNodeptr DoublyLinkedList<T>::insert_front(T x){
+        DListNodeptr new_node = std::make_shared<DoublyLinkedListNode>(x); // creating node
         new_node->next = head; // changing next pointer to the current head
         // if there is a tail then the previous pointer of the current head is the new head
         if (tail){
@@ -45,9 +47,10 @@ template <class T>
 
         return head;
     }
-template <class T>
+    
+    template <class T>
     // inserting given integer after the given pointer
-    std::shared_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::insert_after(const std::shared_ptr<DoublyLinkedListNode<T>> prev, T x){
+    DListNodeptr DoublyLinkedList<T>::insert_after(const DListNodeptr& prev, T x){
         if (prev == nullptr) { // given node can not be a nullptr
             std::cout << "the node does not exist" << std::endl;
             return nullptr;
@@ -56,7 +59,7 @@ template <class T>
             insert_front(x);
             return head;
         }
-        std::shared_ptr<DoublyLinkedListNode<T>> new_node = std::make_shared<DoublyLinkedListNode<T>>(x);
+        DListNodeptr new_node = std::make_shared<DoublyLinkedListNode>(x);
         new_node->prev = prev; // changing previous node of the new node to prev
         new_node->next = prev->next; // changing next node to the next node of prev
         prev->next = new_node; // changing next node of prev to the new node
@@ -65,10 +68,10 @@ template <class T>
         }
         return new_node;
     }
-    
-template <class T>
+
+    template <class T>
     // removing given pointer
-    std::shared_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::remove(const std::shared_ptr<DoublyLinkedListNode<T>> n){
+    DListNodeptr DoublyLinkedList<T>::remove(const DListNodeptr& n){
         if (n->next == nullptr){ // if the list ends after the given pointer nothing can be removed
             return nullptr;
         }
@@ -81,23 +84,23 @@ template <class T>
         (n->prev.lock())->next = n->next; // changing next pointer of previous given pointer to next pointer of given pointer
         return n->next;
     }
-     
+
     template <class T>
     // returns the next pointer of the given pointer
-    std::shared_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::next(const std::shared_ptr<DoublyLinkedListNode<T>> n) const{
+    DListNodeptr DoublyLinkedList<T>::next(const DListNodeptr& n) const{
         return n->next;
-    }
-    
+    } 
+
     template <class T>
     // returns the previous pointer of the given pointer
-    std::weak_ptr<DoublyLinkedListNode<T>>DoublyLinkedList<T>::prev(const std::shared_ptr<DoublyLinkedListNode<T>> n) const{
+    WeakDListNodeptr DoublyLinkedList<T>::prev(const DListNodeptr& n) const{
         return n->prev;
     }
 
     template <class T>
     // prints the current list
-    void DoublyLinkedList<T>::print() const {
-        std::shared_ptr<DoublyLinkedListNode<T>> iterator_node = head; //creating an iterator that starts at the head
+    void DoublyLinkedList<T>::print() const{
+        DListNodeptr iterator_node = head; //creating an iterator that starts at the head
         // prints out data of the node until iterator is a nullptr
         while(iterator_node){
             std::cout << iterator_node->data_ << " -> ";
@@ -105,10 +108,50 @@ template <class T>
         }
         std::cout << "null" << std::endl;
     }
-    
-    
-
 }
 
-
-
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
