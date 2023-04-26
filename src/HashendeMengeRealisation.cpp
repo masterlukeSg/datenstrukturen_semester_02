@@ -76,11 +76,13 @@ namespace ProjectAlpha
     {
         return 0;
     }
-
+*/
     void HashendeMengeRealisation::print()
     {
+        for (int i = 0; i < num_buckets; i++)
+            buckets[i].print_Liste();
     }
-    */
+    
     void HashendeMengeRealisation::belegungsfaktor()
     {
 
