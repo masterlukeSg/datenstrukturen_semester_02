@@ -21,3 +21,4 @@ namespace ProjectAlpha
         std::vector<prio> prioList;
     };
 }
+#include "../src/priorityqueue.ipp"
