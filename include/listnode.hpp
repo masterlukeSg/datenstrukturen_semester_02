@@ -16,7 +16,7 @@ class ListNode{
 public:
   std::shared_ptr<ListNode> next;
   
-  T data_;
+  T data;
 };
 
 // In the end, the ListNodes are dynamically organized on the heap.
@@ -40,16 +40,3 @@ public:
 
 
 
-/*public:
-  ListNode(T data) : data_(data), next(nullptr) {}
-
-
-public:
-  std::shared_ptr<ListNode<T>> next;
-  
-  T data_;
-};
-
-
-
-}*/
