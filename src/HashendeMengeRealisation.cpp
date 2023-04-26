@@ -71,12 +71,22 @@ namespace ProjectAlpha
         }
     }
 
-    /*
+    
     size_t HashendeMengeRealisation::size()
     {
-        return 0;
+        int j = 0;
+        for (int i = 0; i < num_buckets; i++)
+        {
+            ListNodeptr current = buckets[i].get_head();
+            while (current)
+            {
+                j++;
+                current = current->next;
+            }
+        }
+        return j;
     }
-*/
+
     void HashendeMengeRealisation::print()
     {
         for (int i = 0; i < num_buckets; i++)
