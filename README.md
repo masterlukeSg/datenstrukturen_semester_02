@@ -10,7 +10,8 @@ Arbeitsaufteilung
         Hashende Menge -> Lukas
         Geordnete Menge -> Lukas 
 
-    Aufgabe 2: Implementierung
+    
+       Aufgabe 2: Implementierung
         Stack -> Imene
         Queue -> Imene
         Einfach verkettete Liste -> Aicha
