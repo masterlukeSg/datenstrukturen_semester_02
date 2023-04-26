@@ -9,12 +9,12 @@ namespace ProjectAlpha{
     stack<T>::stack(): list() {}
 
     template<class T>
-    void stack<T>::push( T data){
+    void stack<T>::add( T data){
         list.insert_front(data);
     }
 
     template<class T>
-    T stack<T>::remove(){
+    T stack<T>::pop(){
         if (isempty()){
             std::cout << "Stack is Empty\n";
             return T();

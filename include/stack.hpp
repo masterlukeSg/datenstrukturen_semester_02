@@ -13,11 +13,11 @@ namespace ProjectAlpha {
     class stack : public stacktemplate<T> {
         public :
 
+            
             stack();
-
             int getsize() override;
-            void push(T) override;
-            T remove() override;
+            void add(T) override;
+            T pop() override;
             T peek();
             bool isempty();
             void stackDisplay();

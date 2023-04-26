@@ -11,17 +11,22 @@ using namespace ProjectAlpha;
 
 int main(){
     stack<int> s;
-    s.push(5);
-    s.push(7);
-    s.push(16);
+    s.add(5);
+    s.add(7);
+    s.add(16);
     s.stackDisplay();
-    s.push(33);
-    s.push(9);
+    s.add(33);
+    s.add(9);
     s.stackDisplay();
-    s.remove();
+    s.pop();
+    s.stackDisplay();
+    
     
     std::cout<<"Size of list:" << s.getsize() <<std::endl;
     std::cout<<"first element: " << s.peek() <<std::endl;
+    
+
+    
     
     
 }
