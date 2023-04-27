@@ -8,12 +8,12 @@ using namespace ProjectAlpha;
 int main(){
 
     Priority<std::string, int> s;
-    s.insert("fünf", 6);
-    s.insert("zwei", 8);
+    s.insert("sechs", 6);
+    s.insert("acht", 8);
     
-    s.insert("drei", 9);
+    s.insert("neun", 9);
     s.insert("vier", 4);
-   s.print();
+    s.print();
     
 
 }
