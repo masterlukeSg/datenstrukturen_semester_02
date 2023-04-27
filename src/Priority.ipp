@@ -7,34 +7,38 @@
 #include <list>
 #include <iterator>
 
-namespace ProjectAlpha{
+namespace ProjectAlpha
+{
 
     template <class S, class prio>
-    Priority<S,prio>::Priority(){
+    Priority<S, prio>::Priority()
+    {
     }
 
     template <class S, class prio>
-    void Priority<S,prio>::print(){
-        
+    void Priority<S, prio>::print()
+    {
+
         // Die eigentliche Printfunktion
         for (int i = 0; i < priorityList.size(); i++)
-            std::cout <<"Map: " <<queue[priorityList[i]] << std::endl;
-        
-        // Nur für Tetszwecke 
+            std::cout << "Map: " << queue[priorityList[i]] << std::endl;
+
+        // Nur für Tetszwecke
         // std::cout << "Listengröße: " << priorityList.size() << std::endl;
         // for (prio p: priorityList)
         //     std::cout << p<< std::endl;
     }
 
-    template <class S,class prio>
-    void Priority<S, prio>::insert(S s,prio priorityElement){
-       
+    template <class S, class prio>
+    void Priority<S, prio>::insert(S s, prio priorityElement)
+    {
+
         // in map einfügen
         queue[priorityElement] = s;
-        
+
         // in prioListe einfügen
         priorityList.push_back(priorityElement);
-        
+
         // prioList nach größe sortieren
         for (int i = 0; i < priorityList.size(); i++)
         {
@@ -43,32 +47,27 @@ namespace ProjectAlpha{
 
             for (int y = i; y < priorityList.size(); y++)
             {
-                if (priorityList[y] >= kleinsterWert){
-                        kleinsterWert = priorityList[y];
-                        index = y;
+                if (priorityList[y] >= kleinsterWert)
+                {
+                    kleinsterWert = priorityList[y];
+                    index = y;
                 }
             }
 
-            //swap Prozess
+            // swap Prozess
             prio temp = priorityList[i];
             priorityList[i] = kleinsterWert;
             priorityList[index] = temp;
-        }        
+        }
     }
-    
-     
 
-
-
- 
-    template <class S,class prio>
-    S Priority<S, prio>::extract_top(){
-        S topElement = queue[priorityList[priorityList.size()-1]];
+    template <class S, class prio>
+    S Priority<S, prio>::extract_top()
+    {
+        S topElement = queue[priorityList[priorityList.size() - 1]];
         queue.erase(priorityList[0]);
         priorityList.erase(priorityList.begin());
         return topElement;
-
     }
-   
 
 }

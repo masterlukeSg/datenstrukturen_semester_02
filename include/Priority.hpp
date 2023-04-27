@@ -11,6 +11,7 @@ namespace ProjectAlpha{
     template <class S,class prio>
     class Priority: public PriorityTemplate<S,prio>{
         public:
+            // docstream commentar vs code
             Priority();
             void print();
             void insert(S s,prio priorityElement);
@@ -18,6 +19,7 @@ namespace ProjectAlpha{
             
         
         private: 
+        //maxi heap
             std::map<prio, S> queue;
             //prioritäts Liste
             std::vector<prio> priorityList;

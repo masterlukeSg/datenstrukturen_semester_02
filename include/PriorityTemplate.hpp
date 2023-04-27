@@ -10,7 +10,7 @@ namespace ProjectAlpha{
 
         public:
             virtual void insert(S,prio) = 0;
-           // virtual S extract_top() = 0;
+            virtual S extract_top() = 0;
 
 
     };
