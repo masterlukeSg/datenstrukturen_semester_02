@@ -15,56 +15,60 @@ namespace ProjectAlpha{
 
     template <class S, class prio>
     void Priority<S,prio>::print(){
-        std::cout << " größe der liste: " << priorityList.size() << std::endl;
-        for (prio p: priorityList)
-            std::cout << p<< std::endl;
+        
+        // Die eigentliche Printfunktion
+        for (int i = 0; i < priorityList.size(); i++)
+            std::cout <<"Map: " <<queue[priorityList[i]] << std::endl;
+        
+        // Nur für Tetszwecke 
+        // std::cout << "Listengröße: " << priorityList.size() << std::endl;
+        // for (prio p: priorityList)
+        //     std::cout << p<< std::endl;
     }
 
     template <class S,class prio>
     void Priority<S, prio>::insert(S s,prio priorityElement){
        
-       size_t size = priorityList.size();
-       queue[priorityElement] = s;
-        std::vector<prio> zwischenSpeicher;
-         
-        if (priorityList.size() == 0){
-            priorityList.push_back(priorityElement);
-            std::cout << " hier"<< std::endl;
-        }
+        // in map einfügen
+        queue[priorityElement] = s;
         
-        else{
-            for (int i = 0; i < size ; i++){  
+        // in prioListe einfügen
+        priorityList.push_back(priorityElement);
+        
+        // prioList nach größe sortieren
+        for (int i = 0; i < priorityList.size(); i++)
+        {
+            prio kleinsterWert = priorityList[i];
+            int index;
 
-                // wenn neue Priorität höher ist
-                auto it = priorityList.begin();
-                std::advance(it, i);
-                std::cout << " geht um prio: "<< *it << std::endl;
-                if ( *it < priorityElement){
-                    std::advance(it, i);
-                    priorityList.insert(it, priorityElement); 
+            for (int y = i; y < priorityList.size(); y++)
+            {
+                if (priorityList[y] >= kleinsterWert){
+                        kleinsterWert = priorityList[y];
+                        index = y;
                 }
-               
-                else{
-                    //std::advance(it, -i);
-                    //priorityList.insert(it, priorityElement); 
-                } 
             }
-           
-          
-        }
 
+            //swap Prozess
+            prio temp = priorityList[i];
+            priorityList[i] = kleinsterWert;
+            priorityList[index] = temp;
+        }        
     }
     
      
 
 
 
-/*
+ 
     template <class S,class prio>
     S Priority<S, prio>::extract_top(){
-        std::cout << " asugabe";
+        S topElement = queue[priorityList[priorityList.size()-1]];
+        queue.erase(priorityList[0]);
+        priorityList.erase(priorityList.begin());
+        return topElement;
 
     }
-    */
+   
 
 }

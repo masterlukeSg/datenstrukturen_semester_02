@@ -14,13 +14,13 @@ namespace ProjectAlpha{
             Priority();
             void print();
             void insert(S s,prio priorityElement);
-           // S extract_top();
+            S extract_top();
             
         
         private: 
             std::map<prio, S> queue;
             //prioritäts Liste
-            std::list<prio> priorityList;
+            std::vector<prio> priorityList;
 
     };
 }
