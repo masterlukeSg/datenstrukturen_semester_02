@@ -2,19 +2,19 @@
 
 #include <memory>
 
-namespace Datenstrukturen
+namespace ProjectAlpha
 {
 
   template <class T>
-  class DoublyLinkedListNode
+  class DListNode
   {
   public:
-    DoublyLinkedListNode(T data);
+    DListNode(T data);
 
     
-  public:
-    std::shared_ptr<DoublyLinkedListNode<T>> next;
-    std::weak_ptr<DoublyLinkedListNode<T>> prev;
+  
+    std::shared_ptr<DListNode<T>> next;
+    std::weak_ptr<DListNode<T>> prev;
 
     T data_;
   };
@@ -23,8 +23,8 @@ namespace Datenstrukturen
 
 
   
-  typedef std::shared_ptr<DoublyLinkedListNode<class T>> DListNodeptr;
+  //typedef std::shared_ptr<DoublyLinkedListNode<class T>> DListNodeptr;
   
-  typedef std::weak_ptr<DoublyLinkedListNode<class T>> WeakDListNodeptr;
+  //typedef std::weak_ptr<DoublyLinkedListNode<class T>> WeakDListNodeptr;
 
 }

@@ -3,101 +3,93 @@
 #include <iostream>
 #include <memory>
 
-namespace Datenstrukturen
+namespace ProjectAlpha
 {
     template<class T>
-    DoublyLinkedListNode<T>::DoublyLinkedListNode(T data)
+    DListNode<T>::DListNode(T data)
     {
         data_ = data;
+        next= nullptr;
+        prev.lock()= nullptr;
+
     }
+
+   
+
     template<class T>
-    DoublyLinkedList<T>::DoublyLinkedList()
-    {
-        head = nullptr;
-        tail = nullptr;
-    }
-    template<class T>
-    DListNodeptr DoublyLinkedList<T>::get_first() const
+    std::shared_ptr<DListNode<T>> DLinkedList<T>::get_first() const
     {
         return head;
     }
 
     template <class T>
-    DListNodeptr DoublyLinkedList<T>::get_last() const
+    std::shared_ptr<DListNode<T>> DLinkedList<T>::get_last() const
     {
         return tail;
     }
    
     template <class T>
-    DListNodeptr DoublyLinkedList<T> ::insert_last(T x)
+    std::shared_ptr<DListNode<T>> DLinkedList<T>::insert_last(T x)
     {
-        DListNodeptr neuerPointer = std::make_shared<DoublyLinkedListNode>(x);
+        std::shared_ptr<DListNode<T>> neuerPointer = std::make_shared<DListNode<T>>(x);
 
-        
-            neuerPointer->next = nullptr;
-            pred->next = neuerPointer;
-
-            neuerPointer->prev = pred;
-
+        if (tail == nullptr)
+        {
+            head = neuerPointer;
             tail = neuerPointer;
+        }
+        else
+        {
+            neuerPointer->next = nullptr;
+            neuerPointer->prev = tail;
+            tail->next = neuerPointer;
+            tail = neuerPointer;
+        }
 
-            return neuerPointer;
-       
-    }
-    template <class T >
-    DListNodeptr DoublyLinkedList<T>::remove_front()
-    {
-        if (!head)
-            return nullptr;
-        
-        std::shared_ptr<ListNode<T>> toRemove = head;
-        
-        head = head->next;
-        head -> prev.lock() = nullptr;
-        toRemove->next = nullptr;
-        return toRemove;
+        return neuerPointer;
     }
 
     template <class T>
-    DListNodeptr DoublyLinkedList<T>::next(const DListNodeptr &n) const
-    {
-        return n->next;
-    }
-    template < class T >
-    DListNodeptr DoublyLinkedList<T> ::prev(const DListNodeptr &n) const
-    {
-      
-        return n -> prev.lock();
-    }
-    template < class T > 
-    void DoublyLinkedList<T>::print() const
-    {
+    
+    std::shared_ptr<DListNode<T>> DLinkedList<T>::remove_front()
+{
+    if (head == nullptr)
+        return nullptr;
+    
+    std::shared_ptr<DListNode<T>> toRemove = head;
+    head = head->next;
+    if (head != nullptr)
+        head->prev.lock() = nullptr;
+        
+    toRemove->next = nullptr;
+    return toRemove;
+}
 
-        DListNodeptr current = head;
+
+   
+
+    template <class T> 
+    void DLinkedList<T>::print() const
+    {
+        std::shared_ptr<DListNode<T>> current = head;
         while (current)
         {
-
             std::cout << current->data_ << " | ";
             current = current->next;
         }
         std::cout << std::endl;
     }
 
-    template < class T> 
-    int DoublyLinkedList<T>::size(){
-        
-        int count =0;
-        DListNodeptr curr= head;
-
-        while (curr !=){
-
-            curr++;
-            curr= curr->next;
+    template <class T>
+    int DLinkedList<T>::size() 
+    {
+        int count = 0;
+        std::shared_ptr<DListNode<T>> current = head;
+        while (current!= nullptr)
+        {
+            count++;
+            current = current->next;
         }
         return count;
-
     }
-
-    
-
 }

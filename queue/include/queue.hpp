@@ -1,9 +1,9 @@
 #pragma once 
 #include <iostream>
 #include "../include/queueinterface.hpp"
-#include "../include/doublylinkedlist.hpp"
-#include "../include/dllistnode.hpp"
 #include "../src/doublylinkedlist.ipp"
+#include "../include/dllistnode.hpp"
+
 
 namespace ProjectAlpha{
 
@@ -12,19 +12,19 @@ namespace ProjectAlpha{
 
         public:
 
-        queue();
-        void add() override;
+        explicit queue();
+        void add( T data) override;
         T pop() override;
         int getSize() override;
         T peekTop();
         T peekFirst();
         bool isEmpty();
-        void queueDisplay();
+        void queueDisplay() const;
 
         private:
 
-        DoublyLinkedListNode<T> list;
+        DLinkedList<T> list;
 
 
-    }
+    };
 }

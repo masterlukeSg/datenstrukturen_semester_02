@@ -4,61 +4,69 @@
 #include "../include/dllistnode.hpp"
 #include <memory>
 
-namespace ProjectAlpha{
+namespace ProjectAlpha {
 
     template <class T>
-    queue<T>::queue() : DoublyLinkedList(){}
+    queue<T>::queue() : list() {}
+    
 
-    template <class T> 
-    void queue<T>::add(T data){
+
+    template <class T>
+    void queue<T>::add(T data) {
         list.insert_last(data);
     }
 
     template <class T>
-    T queue<T>::pop(){
-        if (isEmpty()){
-            std::cout<< "Queue is Empty\n";
+    T queue<T>::pop() {
+        if (isEmpty()) {
+            std::cout << "Queue is Empty\n";
             return T();
 
-        }else {
-             T value= list.remove_front()-> data_;
-        }return value;
+        } else {
+            T value = list.remove_front()->data_;
+            return value;
+        }
     }
-    
+
     template <class T>
-    int queue<T>::getSize(){
+    int queue<T>::getSize() {
         return list.size();
     }
 
-
-    template< class T >
+    template <class T>
     T queue<T>::peekTop() {
-        if (isEmpty()){
-            std::cout<< "Queue is Empty\n";
+        if (isEmpty()) {
+            std::cout << "Queue is Empty\n";
             return T();
-        }else {
+        } else {
             return list.get_first()->data_;
         }
-     
     }
 
-    T queue<T>::peekFirst(){
-        if (isEmpty()){
-            std::cout<< "Queue is Empty\n";
+    template <class T>
+    T queue<T>::peekFirst() {
+        if (isEmpty()) {
+            std::cout << "Queue is Empty\n";
             return T();
 
-        }else {
+        } else {
             return list.get_last()->data_;
         }
     }
 
-    bool queue<T>::isEmpty(){
-
-        return (list.get_first()==nullptr);
+    template <class T>
+    bool queue<T>::isEmpty() {
+    return list.size() == 0;
     }
 
-    void queue<T>::queueDisplay(){
+
+    
+
+    template <class T>
+    void queue<T>::queueDisplay() const {
+
         return list.print();
-    }
 
+    }
 }
+ // namespace ProjectAlpha

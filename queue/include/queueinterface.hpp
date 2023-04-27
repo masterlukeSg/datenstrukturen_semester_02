@@ -1,5 +1,5 @@
 #pragma once
-#include <ioastream>
+#include <iostream>
 
 namespace ProjectAlpha{
 
@@ -8,8 +8,8 @@ namespace ProjectAlpha{
     class queueinterface {
 
         public:
-            virtual int size()= 0;
-            virtual void pop()=0;
-            virtual T add() = 0;
+            virtual int getSize()= 0;
+            virtual T pop()=0;
+            virtual void add(T) = 0;
     }; 
 }

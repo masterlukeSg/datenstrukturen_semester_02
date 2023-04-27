@@ -4,36 +4,30 @@
 
 #include "../include/dllistnode.hpp"
 
-namespace Datenstrukturen {
+namespace ProjectAlpha {
 template<class T>
-class DoublyLinkedList{
+class DLinkedList{
 public:
-  DoublyLinkedList();
+   DLinkedList(): head(nullptr), tail(nullptr) {}
   
   // Get the first Node of the current List
-  DListNodeptr get_first() const;
+  std::shared_ptr<DListNode<T>> get_first() const;
   
   // Get the last Node of the current List
-  DListNodeptr get_last() const;
+  std::shared_ptr<DListNode<T>> get_last() const;
   
   // Insert and delete Nodes
   
-  DListNodeptr insert_last(T x);
-  DListNodeptr remove_front();
-  int size ();
+  std::shared_ptr<DListNode<T>> insert_last(T x);
+  std::shared_ptr<DListNode<T>> remove_front();
+  int size();
 
-  // Get the next Node of the current List
-  DListNodeptr next(const DListNodeptr& n) const;
-  
-  // Get the previous Node of the current List
-  DListNodeptr prev(const DListNodeptr& n) const;
-
-  // Print the current List
   void print() const;
 
-private:
-  DListNodeptr head;
-  DListNodeptr tail;
+
+
+  std::shared_ptr<DListNode<T>> head;
+  std::shared_ptr<DListNode<T>> tail;
 };
 
 }
