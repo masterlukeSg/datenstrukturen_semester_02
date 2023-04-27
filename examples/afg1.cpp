@@ -12,7 +12,11 @@ int main(){
     s.insert("acht", 8);
     
     s.insert("neun", 9);
+    
     s.insert("vier", 4);
+    s.print();
+    std::cout << " --- " << std::endl;
+    s.extract_top();
     s.print();
     
 

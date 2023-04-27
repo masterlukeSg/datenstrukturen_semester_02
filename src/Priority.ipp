@@ -18,7 +18,7 @@ namespace ProjectAlpha{
         
         // Die eigentliche Printfunktion
         for (int i = 0; i < priorityList.size(); i++)
-            std::cout << queue[priorityList[i]] << std::endl;
+            std::cout <<"Map: " <<queue[priorityList[i]] << std::endl;
         
         // Nur für Tetszwecke 
         // std::cout << "Listengröße: " << priorityList.size() << std::endl;
@@ -43,7 +43,7 @@ namespace ProjectAlpha{
 
             for (int y = i; y < priorityList.size(); y++)
             {
-                if (priorityList[y] <= kleinsterWert){
+                if (priorityList[y] >= kleinsterWert){
                         kleinsterWert = priorityList[y];
                         index = y;
                 }
@@ -60,12 +60,15 @@ namespace ProjectAlpha{
 
 
 
-/*
+ 
     template <class S,class prio>
     S Priority<S, prio>::extract_top(){
-        std::cout << " asugabe";
+        S topElement = queue[priorityList[priorityList.size()-1]];
+        queue.erase(priorityList[0]);
+        priorityList.erase(priorityList.begin());
+        return topElement;
 
     }
-    */
+   
 
 }
