@@ -1,6 +1,7 @@
-#include "include/list.hpp"
-#include "include/listnode.hpp"
+#include "../include/list.hpp"
+#include "../include/listnode.hpp"
 #include "iostream"
+#include <memory>
 
 namespace ProjectAlpha{
     template<class T>
@@ -17,8 +18,8 @@ namespace ProjectAlpha{
 
     template <class T>
     // inserting given integer at the front of the list
-    ListNodeptr List<T>::insert_front (T x) {
-        ListNodeptr new_node = std::make_shared<ListNode>(x); //creating node
+    std::shared_ptr<ListNode<T>> List<T>::insert_front (T x) {
+        std::shared_ptr<ListNode<T>> new_node = std::make_shared<ListNode<T>>(x); //creating node
         new_node->next = head; // changing next pointer to the current head
         head = new_node; // new head is new node
 
@@ -27,7 +28,7 @@ namespace ProjectAlpha{
 
     template <class T>
     // inserting given integer after the given pointer
-    ListNodeptr List<T>::insert_after (const ListNodeptr& current, T x){
+    std::shared_ptr<ListNode<T>> List<T>::insert_after (const std::shared_ptr<ListNode<T>>& current, T x){
         if (current == nullptr){ // given node can not be a nullptr
             std::cout << "the node does not exist" << std::endl;
             return nullptr;
@@ -36,7 +37,7 @@ namespace ProjectAlpha{
             insert_front(x);
             return head;
         }
-        ListNodeptr new_node = std::make_shared<ListNode>(x); // creating node
+        std::shared_ptr<ListNode<T>> new_node = std::make_shared<ListNode<T>>(x); // creating node
         new_node -> next = current -> next; // changing next pointer to the next pointer of current
         current -> next = new_node; // changing next pointer of current to the new node
         return new_node;
@@ -44,36 +45,36 @@ namespace ProjectAlpha{
      
      template <class T>
     // removing a pointer at the beginning of the list
-    ListNodeptr List<T>::remove_front (){
+    std::shared_ptr<ListNode<T>> List<T>::remove_front (){
         if (!head){ // if we have an empty list we do not need to remove anything
             return nullptr;
         }
-        ListNodeptr new_head = head->next; // creating a new head pointing to the next object of current head
+        std::shared_ptr<ListNode<T>> new_head = head->next; // creating a new head pointing to the next object of current head
         head = new_head; // new head is from now on the head
         return head;
     }
       
     template <class T>
     // removing a pointer after the given pointer
-    ListNodeptr List<T>::remove_after (const ListNodeptr& current){
+    std::shared_ptr<ListNode<T>> List<T>::remove_after (const std::shared_ptr<ListNode<T>>& current){
         if (current -> next == nullptr) { // if the list ends after the given pointer then nothing can be removed
             return nullptr;
         }
-        ListNodeptr tmp_node = current -> next; // creating temporary pointer
+        std::shared_ptr<ListNode<T>> tmp_node = current -> next; // creating temporary pointer
         current -> next = tmp_node -> next; // setting given pointer to the next of tmp node
         return current -> next;
     }
 
     template <class T>
     // returns the next pointer of the given pointer
-    ListNodeptr List<T>::next (const ListNodeptr& current){
+    std::shared_ptr<ListNode<T>> List<T>::next (const std::shared_ptr<ListNode<T>>& current){
         return current -> next;
     }
 
     template <class T>
     // prints the whole list
     void List<T>::print() const{
-        ListNodeptr iterator_node = head; // creating an iterator that starts at the head
+        std::shared_ptr<ListNode<T>> iterator_node = head; // creating an iterator that starts at the head
         // prints out data of the node until iterator is a nullptr
         while (iterator_node) {
             std::cout << iterator_node->data_ << " -> ";

@@ -1,4 +1,8 @@
-#include <list.hpp>
+#include "../include/list.hpp"
+#include <iostream>
+#include "../include/listnode.hpp"
+#include "../src/linkedlist.cpp"
+#include <memory>
 //#include <Doubly_Linked_List.hpp>
 
 
@@ -10,8 +14,29 @@
  using namespace ProjectAlpha;
 
  int main() {
+    /**List<int> liste;
+
+    liste.insert_front(15);
+    liste.insert_front(17);
+    liste.insert_front(9);
+    liste.print();
+    liste.remove_front();
+    liste.print(); */   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     List<int> liste;
-    ListNodeptr current;
+    
+      std::shared_ptr<ListNode<int>> current;
 
     // prints the (empty) list
     liste.print();

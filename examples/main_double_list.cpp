@@ -1,6 +1,9 @@
 
-#include <Doubly_Linked_List.hpp>
-#include <Doubly_Linked_Listnode.hpp>
+#include "../include/Doubly_Linked_List.hpp"
+#include "../include/Doubly_Linked_Listnode.hpp"
+#include "../src/Double_Linked_List.cpp"
+#include <memory>
+#include <iostream>
 
 
 //
@@ -10,7 +13,7 @@
 
 int main (){
   DoublyLinkedList<int> Liste;
-  DListNodeptr current;
+  std::shared_ptr<DoublyLinkedListNode<int>> current;
 
   // prints the (empty) list
   Liste.print();

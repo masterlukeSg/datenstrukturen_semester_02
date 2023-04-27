@@ -14,9 +14,9 @@ class ListNode{
 // nicht verwendet werden. Der schlechte Stil (Membervariablen sind public) wird
 // hier nur deshalb verwendet, um die Datenstruktur schnell zu entwickeln.
 public:
-  std::shared_ptr<ListNode> next;
+  std::shared_ptr<ListNode<T>> next;
   
-  T data;
+  T data_;
 };
 
 // In the end, the ListNodes are dynamically organized on the heap.
@@ -26,7 +26,7 @@ public:
 
 // The type "std::shared_ptr<ListNode>" is abbriviated with "ListNodeptr"
 
- typedef std::shared_ptr<ListNode<class T>> ListNodeptr;
+ //typedef std::shared_ptr<ListNode<class T>> ListNodeptr;
 
 }
 

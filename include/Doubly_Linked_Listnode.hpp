@@ -14,11 +14,11 @@ public:
 // nicht verwendet werden. Der schlechte Stil (Membervariablen sind public) wird
 // hier nur deshalb verwendet, um die Datenstruktur schnell zu entwickeln.
 public:
-  std::shared_ptr<DoublyLinkedListNode> next;
-  std::weak_ptr<DoublyLinkedListNode> prev;
+  std::shared_ptr<DoublyLinkedListNode<T>> next;
+  std::weak_ptr<DoublyLinkedListNode<T>> prev;
 
   
-  T data;
+  T data_;
 };
 
 // In the end, the DoublyLinkedListNode are dynamically organized on the heap.
@@ -27,9 +27,9 @@ public:
 // to iterate through the nodes (i.e., we want multiple references at once).
 
 // The type "std::shared_ptr<DoublyLinkedListNode>" is abbriviated with "DListNodeptr"
-typedef std::shared_ptr<DoublyLinkedListNode<class T>> DListNodeptr;
+//typedef std::shared_ptr<DoublyLinkedListNode<class T>> DListNodeptr;
 // The type "std::weak_ptr<DoublyLinkedListNode>" is abbriviated with "WeakDListNodeptr"
-typedef std::weak_ptr<DoublyLinkedListNode<class T>> WeakDListNodeptr;
+//typedef std::weak_ptr<DoublyLinkedListNode<class T>> WeakDListNodeptr;
 
 }
 

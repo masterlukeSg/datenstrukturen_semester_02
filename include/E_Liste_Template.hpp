@@ -1,6 +1,7 @@
 #pragma once 
 #include <iostream> 
-#include <Doubly_Linked_Listnode.hpp>
+#include "../include/listnode.hpp"
+
 
 
 namespace ProjectAlpha {
@@ -11,12 +12,12 @@ namespace ProjectAlpha {
 
         public :
 
-        virtual int get_size()=0;
-        virtual std::shared_ptr<ListNode<T>> get_head()=0;
-        virtual std::shared_ptr<ListNode<T>> get_next(std::shared_ptr<ListNode<T>>)=0;
-        virtual void insert_front(T)=0;
-        virtual void remove_front(T)=0;
-        virtual void insert_after(std::shared_ptr<ListNode<T>>,T)=0;
-        virtual void remove_after(std::shared_ptr<ListNode<T>>)=0;
+        
+        //virtual std::shared_ptr<ListNode<T>> get_head()=0;
+        virtual std::shared_ptr<ListNode<T>> next(const std::shared_ptr<ListNode<T>>&)=0;
+        virtual std::shared_ptr<ListNode<T>> insert_front(T)=0;
+        virtual std::shared_ptr<ListNode<T>> remove_front()=0;
+        virtual std::shared_ptr<ListNode<T>> insert_after(const std::shared_ptr<ListNode<T>>&,T)=0;
+        virtual std::shared_ptr<ListNode<T>> remove_after(const std::shared_ptr<ListNode<T>>&)=0;
     };
 }
