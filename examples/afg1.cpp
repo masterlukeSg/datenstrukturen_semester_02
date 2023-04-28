@@ -1,4 +1,5 @@
 #include "../src/Priority.ipp"
+#include "../include/maxheap.hpp"
 #include <string>
 
 // clang++ -std=c++17 -I./include src/Test.ipp examples/afg1.cpp

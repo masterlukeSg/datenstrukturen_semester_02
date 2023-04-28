@@ -1,5 +1,6 @@
 #pragma once
 #include "../include/Priority.hpp"
+#include "../include/maxheap.hpp"
 #include <iostream>
 #include <string>
 #include <map>
@@ -13,6 +14,8 @@ namespace ProjectAlpha
     template <class S, class prio>
     Priority<S, prio>::Priority()
     {
+        //ToDo: Wie maxheap einfuegen?
+        //MaxHeap m;
     }
 
     template <class S, class prio>
@@ -22,11 +25,6 @@ namespace ProjectAlpha
         // Die eigentliche Printfunktion
         for (int i = 0; i < priorityList.size(); i++)
             std::cout << "Map: " << queue[priorityList[i]] << std::endl;
-
-        // Nur für Tetszwecke
-        // std::cout << "Listengröße: " << priorityList.size() << std::endl;
-        // for (prio p: priorityList)
-        //     std::cout << p<< std::endl;
     }
 
     template <class S, class prio>
