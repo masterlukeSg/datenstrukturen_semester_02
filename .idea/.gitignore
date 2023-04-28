@@ -7,3 +7,4 @@
 /dataSources/
 /dataSources.local.xml
 .vscode/*
+/examples/afg1.dSYM/*
