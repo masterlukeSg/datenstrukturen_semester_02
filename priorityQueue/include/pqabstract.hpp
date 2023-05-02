@@ -2,15 +2,16 @@
 
 #include <iostream>
 
-namespace ProjectAlpha{
+namespace ProjectAlpha
+{
 
-    template<class T, class Prio>
+    template <class T, class Prio>
     class abstract_Pqueue
     {
     public:
-          virtual int get_size() = 0;
-          virtual void insert (T data, Prio prioritaet) = 0;
-          virtual T remove() =0; 
+        virtual int get_size() = 0;
+        virtual void insert(T data, Prio prioritaet) = 0;
+        virtual T remove() = 0;
     };
 
 }

@@ -20,7 +20,7 @@ class PQueue_realisation : public abstract_Pqueue<T, Prio>
 public:
     /**
      * @brief Construct a new pqueue realisation object
-     *
+     * size = 0
      */
     PQueue_realisation();
 
@@ -128,6 +128,16 @@ int PQueue_realisation<T, Prio>::get_size()
     return size;
 }
 
+/**
+ * @brief Insert Funktion
+ * Erstellt einen neuen Node und fügt diesen in die "Schlange" ein.
+ * Heapeigenschaft wiederherstellen: shift_up
+ * Size um eins erhöhen
+ * @tparam T
+ * @tparam Prio
+ * @param data
+ * @param prioritaet
+ */
 template <class T, class Prio>
 void PQueue_realisation<T, Prio>::insert(T data, int prioritaet)
 {
@@ -137,6 +147,15 @@ void PQueue_realisation<T, Prio>::insert(T data, int prioritaet)
     size = size + 1;
 }
 
+/**
+ * @brief gibt Parent wieder
+ *
+ *
+ * @tparam T
+ * @tparam Prio
+ * @param i
+ * @return int
+ */
 template <class T, class Prio>
 int PQueue_realisation<T, Prio>::parent(int i)
 {
@@ -144,6 +163,14 @@ int PQueue_realisation<T, Prio>::parent(int i)
     return t;
 }
 
+/**
+ * @brief gibt rechtes Kind wieder
+ *
+ * @tparam T
+ * @tparam Prio
+ * @param i
+ * @return int
+ */
 template <class T, class Prio>
 int PQueue_realisation<T, Prio>::right_child(int i)
 {
@@ -151,6 +178,14 @@ int PQueue_realisation<T, Prio>::right_child(int i)
     return t;
 }
 
+/**
+ * @brief gibt linkes Kind wieder
+ *
+ * @tparam T
+ * @tparam Prio
+ * @param i
+ * @return int
+ */
 template <class T, class Prio>
 int PQueue_realisation<T, Prio>::left_child(int i)
 {
@@ -158,18 +193,33 @@ int PQueue_realisation<T, Prio>::left_child(int i)
     return t;
 }
 
+/**
+ * @brief Gibt die Priorität des Objekts wieder
+ *
+ * @tparam T
+ * @tparam Prio
+ * @return Prio
+ */
 template <class T, class Prio>
 Prio PQnode<T, Prio>::get_prioritaet()
 {
     return prioritaet_;
 }
 
+/**
+ * @brief stellt die Heapeigenschaft von oben nach unten wieder her
+ * ist die Priorität von i größer als von dessen parent, werden diese ELement im Vecktor an der stelle vertauscht
+ * Geht solange, bis die Bedingung nicht mehr erfüllt ist
+ * @tparam T
+ * @tparam Prio
+ * @param i
+ */
 template <class T, class Prio>
 void PQueue_realisation<T, Prio>::shift_up(int i)
 {
     while (i > 0 and (Schlange[i].get_prioritaet() > Schlange[parent(i)].get_prioritaet()))
     {
-        // std::swap(Schlange[parent(i)], Schlange[i]);
+
         PQnode<T, Prio> hilfe = Schlange[parent(i)];
         Schlange[parent(i)] = Schlange[i];
         Schlange[i] = hilfe;
@@ -177,6 +227,15 @@ void PQueue_realisation<T, Prio>::shift_up(int i)
     }
 }
 
+/**
+ * @brief Shift Down Funktion. Setzten max auf übergebenen Knoten. L und R = links und rechts index.
+ * Wenn l kleiner gleich size (existiert linkes kind?) und priorität vom linken kind größer als aktueller Knoten -> max index auf l
+ * Genau das gleiche für rechtes Kind
+ * Wenn i != max -> Dann i und max index tauschen. Rekursivesaustuaschen bis fertig ist.
+ * @tparam T
+ * @tparam Prio
+ * @param i<a
+ */
 template <class T, class Prio>
 void PQueue_realisation<T, Prio>::shift_down(int i)
 {
@@ -193,7 +252,7 @@ void PQueue_realisation<T, Prio>::shift_down(int i)
     }
     if (i != max_indx)
     {
-        // std::swap(Schlange[i], Schlange[max_indx]);
+
         PQnode<T, Prio> hilfe = Schlange[max_indx];
         Schlange[max_indx] = Schlange[i];
         Schlange[i] = hilfe;
@@ -201,9 +260,22 @@ void PQueue_realisation<T, Prio>::shift_down(int i)
     }
 }
 
+/**
+ * @brief Remove funktion.
+ * Tauscht letztes und erstes Element. Entfernt dann das letztes Element, ruft shift down auf und gibt das erste element zurcück
+ *
+ * @tparam T
+ * @tparam Prio
+ * @return T
+ */
 template <class T, class Prio>
 T PQueue_realisation<T, Prio>::remove()
-{
+{   
+
+    if (size == 0){
+        throw std::logic_error("Es gibt keine Elemente zum entfernen. (leere Liste)");
+    }
+
     T result = Schlange[0].get_data();
     Schlange[0] = Schlange[size - 1];
     size = size - 1;
@@ -212,12 +284,17 @@ T PQueue_realisation<T, Prio>::remove()
     return result;
 }
 
+/**
+ * @brief Print. Gibt alle Elemente aus "Schlange aus"
+ *
+ * @tparam T
+ * @tparam Prio
+ */
 template <class T, class Prio>
 void PQueue_realisation<T, Prio>::print()
 {
     for (int k = 0; k < size; k++)
     {
         std::cout << Schlange[k].get_data() << std::endl;
-        ;
     }
 }
