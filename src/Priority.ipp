@@ -14,7 +14,6 @@ namespace ProjectAlpha
     template <class S, class prio>
     Priority<S, prio>::Priority()
     {
-        //ToDo: Wie maxheap einfuegen?
         //MaxHeap m;
     }
 
