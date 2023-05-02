@@ -23,7 +23,7 @@ namespace ProjectAlpha
         size_t num_buckets;
 
         // ToDO: List von AIcha implementieren
-        std::vector<List<T>> buckets;
+        std::vector<List<T> > buckets;
 
     public:
         // Konstruktor
