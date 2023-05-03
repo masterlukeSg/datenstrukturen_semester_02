@@ -18,33 +18,68 @@ public:
       * @brief Construct a new hashende Mengerealisation object
       *
       */
-     hashendeMengerealisation(); // Konstruktor einer Hashtabelle
-
+     hashendeMengerealisation(); 
+     
      /**
-      * @brief insert Funktion
+      * @brief insert Funktion. Fügt Element hinzu
       *
       * @param x
       */
-     void insert(const T x); // Siehe Interface abstract_hashendemenge<T>
+     void insert(const T x); 
 
-     bool find(const T &x) const; // Siehe Interface abstract_hashendemenge<T>
+     /**
+      * @brief Find fkt: findet übergebens Element
+      * 
+      * @param x 
+      * @return true 
+      * @return false 
+      */
+     bool find(const T &x) const; 
 
-     void remove(const T &x); // Siehe Interface abstract_hashendemenge<T>
+     /**
+      * @brief Remove fkt. Entfernt elemtn
+      * 
+      * @param x 
+      */
+     void remove(const T &x); 
 
-     void print() const; // Druckt die Hashtabelle
 
-     size_t size() const; // Gibt die Anzahl an Elementen der Hashtabelle zurueck
+     /**
+      * @brief druckt alle daten der hashendemengen aus
+      * 
+      */
+     void print() const; 
+
+     /**
+      * @brief Size fkt (gibt size wieder zurück)
+      * 
+      * @return size_t 
+      */
+     size_t size() const; 
 
 private:
      /**
-      * @brief hashfkt
+      * @brief hashfkt Hashfunktion welche jeder Information eine Zahl zuordnent durch Zahl % num_buckets lässt dich das Bucket dieser Information zuordnen
       *
       */
-     const std::function<size_t(const T &)> hashfkt; // Hashfunktion welche jeder Information eine Zahl zuordnent durch Zahl % num_buckets lässt dich das Bucket dieser Information zuordnen
+     const std::function<size_t(const T &)> hashfkt;
 
-     size_t num_buckets; // Anzahl an Buckets dieser Hashtabelle
+     /**
+      * @brief num_buckest 
+      * Anzahl an Buckets dieser Hashtabelle
+      * 
+      */
+     size_t num_buckets; 
 
-     std::vector<List<T>> buckets; // Ein Vektor welcher die einzelnen Buckets enthällt welche durch Listen realiesiert werden
+     /**
+      * @brief buckets
+      * Ein Vektor welcher die einzelnen Buckets enthällt welche durch Listen realiesiert werden
+      */
+     std::vector<List<T> > buckets; 
 
-     void belegungsfaktor(); // Eine Funktion welche abhängig vom Fall die Anzahl an Buckets verdoppelt oder halbiert
+     /**
+      * @brief belegungsfaktor Funktion
+      * ine Funktion welche abhängig vom Fall die Anzahl an Buckets verdoppelt oder halbiert
+      */
+     void belegungsfaktor();
 };

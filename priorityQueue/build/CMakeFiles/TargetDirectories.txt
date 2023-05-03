@@ -1,0 +1,5 @@
+/Users/lukasbaumeister/zettel0/build/CMakeFiles/ProjectAlpha.dir
+/Users/lukasbaumeister/zettel0/build/CMakeFiles/package.dir
+/Users/lukasbaumeister/zettel0/build/CMakeFiles/package_source.dir
+/Users/lukasbaumeister/zettel0/build/CMakeFiles/edit_cache.dir
+/Users/lukasbaumeister/zettel0/build/CMakeFiles/rebuild_cache.dir
