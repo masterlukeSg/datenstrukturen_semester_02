@@ -1,50 +1,41 @@
 #pragma once
+#include "hashendemenge.hpp"
+#include "list.hpp"
+#include <memory>
+#include <cstddef>
 #include <iostream>
-#include "HashendeMenge.hpp"
 #include <string>
-#include "../include/list.hpp"
-#include <vector>
 #include <functional>
+#include <vector>
 
-namespace ProjectAlpha
+using namespace ProjectAlpha;
+
+template <class T>
+class hashendeMengerealisation : public abstract_hashendemenge<T>
 {
+public:
+     hashendeMengerealisation(); // Konstruktor einer Hashtabelle
 
-    template <class T>
-    class HashendeMengeRealisation : public HashendeMenge<T>
-    {
-    private:
-        // Die verwendete Hashfunktion.
-        // Um den Bucket eines Elements x zu finden
-        // kann die Hashfkt wie folgt verwendet werden
-        //   hashfkt(x) % num_buckets;
-        const std::function<size_t(const T &)> hashfkt;
+     void insert(const T x); // Siehe Interface abstract_hashendemenge<T>
 
-        // Die aktuelle Anzahl der Buckets
-        size_t num_buckets;
+     bool find(const T &x) const; // Siehe Interface abstract_hashendemenge<T>
 
-        // ToDO: List von AIcha implementieren
-        std::vector<List<T> > buckets;
+     void remove(const T &x); // Siehe Interface abstract_hashendemenge<T>
 
-    public:
-        // Konstruktor
-        HashendeMengeRealisation();
-        // Element einfügen
-        void insert(T) override;
+     void print() const; // Druckt die Hashtabelle
 
-        // Gibt genau dann true zurück,
-        // wenn das Element in der Hashtable enthalten ist
-        bool find(T) override;
+     size_t size() const; // Gibt die Anzahl an Elementen der Hashtabelle zurueck
 
-        // Element entfernen
-        void remove(T) override;
+private:
+     /**
+      * @brief hashfkt
+      * 
+      */
+     const std::function<size_t(const T &)> hashfkt; // Hashfunktion welche jeder Information eine Zahl zuordnent durch Zahl % num_buckets lässt dich das Bucket dieser Information zuordnen
 
-        // Druckt alle Elemente der Hashtable
-        void print();
+     size_t num_buckets; // Anzahl an Buckets dieser Hashtabelle
 
-        // Gibt Anzahl der Elemente zurück
-        size_t size();
-        // Belegungsfaktor wird errechnet, um die Buckets gleichmßig zu füllen
-        void belegungsfaktor() override;
-    };
-}
+     std::vector<List<T> > buckets; // Ein Vektor welcher die einzelnen Buckets enthällt welche durch Listen realiesiert werden
 
+     void belegungsfaktor(); // Eine Funktion welche abhängig vom Fall die Anzahl an Buckets verdoppelt oder halbiert
+};

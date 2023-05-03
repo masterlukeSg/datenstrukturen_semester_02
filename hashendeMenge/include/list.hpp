@@ -1,33 +1,28 @@
 #pragma once
 #include <memory>
+#include <iostream>
 #include "listnode.hpp"
 
-namespace ProjectAlpha
-{
+namespace ProjectAlpha{
 
-    template <class T>
-    class List
-    {
+    template<class T>
+    class List{
     public:
-        List() : head(nullptr) {}
 
-        // Insert and delete Nodes
-        std::shared_ptr<ListNode<T> > get_head() const;
-        std::shared_ptr<ListNode<T> > insert_front(T x);
-        std::shared_ptr<ListNode<T> > insert_after(const std::shared_ptr<ListNode<T> > &, T x);
-        std::shared_ptr<ListNode<T> > remove_front();
-        std::shared_ptr<ListNode<T> > remove_after(const std::shared_ptr<ListNode<T> > &);
+        List();    //Konstruktor einer Liste
 
-        // Get the next Node of the current List
-        // std::shared_ptr<ListNode<T>> next(const std::shared_ptr<ListNode<T>> &);
+        std::shared_ptr<listnode <T> > insert_front(T x);                                           //Funktion die einen Knoten vorne in der Liste einfuegt
+        std::shared_ptr<listnode <T> > insert_after(const std::shared_ptr<listnode <T> >&, T x);    //Funktion welche einen Knoten hinter einen anderen einfuegt
+        std::shared_ptr<listnode <T> > remove_front();                                              //Funktion welche das vordere Element einer Liste entfernt
+        std::shared_ptr<listnode <T> > remove_after(const std::shared_ptr<listnode<T> >&);          //Funktion welche einen Knoten hinter einem gegebenen entfernt
+        std::shared_ptr<listnode <T> > get_head()const;                                             //Funktion welche den Head sprich das vorderste Element einer Liste zurueckgibt
 
-        // Print the current List
-        void print() const;
+        std::shared_ptr<listnode <T> > next(const std::shared_ptr<listnode <T> >&);                 //Funktion welche den nächsten Knoten eines gegeben Knoten zurueck gibt
+
+        void print() const;                                                                         //Funktion welche die Liste druckt
 
     private:
-        std::shared_ptr<ListNode<T> > head;
+        std::shared_ptr<listnode <T> > head;                                                        //Der Kopf sprich das vorderste Element der Liste
     };
-
-
-
 }
+

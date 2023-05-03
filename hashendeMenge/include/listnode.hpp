@@ -1,21 +1,19 @@
 #pragma once
 #include <memory>
-#include <string>
+#include <iostream>
+
 namespace ProjectAlpha
 {
 
-  template <class T>
-  class ListNode
-  {
+    template <class T>
+    class listnode
+    {
+    public:
+        explicit listnode(T data); // Konstruktor eines Knoten
 
-  public:
-    ListNode(T data) : data_(data), next(nullptr) {}
+        std::shared_ptr<listnode <T > > next; // Nachbarknoten des erstellten Knoten
 
-    std::shared_ptr<ListNode<T> > next;
-
-    T data_;
-  };
-
-  typedef std::shared_ptr<ListNode<std::string> > ListNodeptr;
+        T data_; // Daten welche in dem Knoten gespeichert werden
+    };
 
 }
