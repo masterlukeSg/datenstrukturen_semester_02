@@ -5,6 +5,9 @@
 
 using namespace ProjectAlpha;
 
+// clang++ -std=c++17 -I./include src/hashendeMengeRealisation.cpp examples/main.cpp -o
+
+
 int main(){
     hashendeMengerealisation<std::string> n;
     n.insert("5");

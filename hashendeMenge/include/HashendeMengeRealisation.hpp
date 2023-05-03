@@ -14,8 +14,17 @@ template <class T>
 class hashendeMengerealisation : public abstract_hashendemenge<T>
 {
 public:
+     /**
+      * @brief Construct a new hashende Mengerealisation object
+      *
+      */
      hashendeMengerealisation(); // Konstruktor einer Hashtabelle
 
+     /**
+      * @brief insert Funktion
+      *
+      * @param x
+      */
      void insert(const T x); // Siehe Interface abstract_hashendemenge<T>
 
      bool find(const T &x) const; // Siehe Interface abstract_hashendemenge<T>
@@ -29,13 +38,13 @@ public:
 private:
      /**
       * @brief hashfkt
-      * 
+      *
       */
      const std::function<size_t(const T &)> hashfkt; // Hashfunktion welche jeder Information eine Zahl zuordnent durch Zahl % num_buckets lässt dich das Bucket dieser Information zuordnen
 
      size_t num_buckets; // Anzahl an Buckets dieser Hashtabelle
 
-     std::vector<List<T> > buckets; // Ein Vektor welcher die einzelnen Buckets enthällt welche durch Listen realiesiert werden
+     std::vector<List<T>> buckets; // Ein Vektor welcher die einzelnen Buckets enthällt welche durch Listen realiesiert werden
 
      void belegungsfaktor(); // Eine Funktion welche abhängig vom Fall die Anzahl an Buckets verdoppelt oder halbiert
 };
