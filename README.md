@@ -23,10 +23,10 @@
 ### Implementierung
 
 ## CMake
-cmake_minimum_required(VERSION 3.16)
-project(ProjectAlpha VERSION 0.1.0)
-set(CMAKE_CXX_STANDARD 17)
-add_executable(ProjectAlpha priorityQueue/examples/main.cpp)
+        cmake_minimum_required(VERSION 3.16)
+        project(ProjectAlpha VERSION 0.1.0)
+        set(CMAKE_CXX_STANDARD 17)
+        add_executable(ProjectAlpha priorityQueue/examples/main.cpp)
 
 
     
