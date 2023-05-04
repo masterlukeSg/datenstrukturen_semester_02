@@ -1,7 +1,7 @@
 # Zettel0
 
-Arbeitsaufteilung
-       Aufgabe 1: Interface + UML
+### Arbeitsaufteilung
+#Aufgabe 1: Interface + UML
         Stack -> Imene
         Queue -> Imene
         Einfach verkettete Liste -> Aicha
@@ -11,7 +11,7 @@ Arbeitsaufteilung
         Geordnete Menge -> Lukas 
 
     
-       Aufgabe 2: Implementierung
+#Aufgabe 2: Implementierung
         Stack -> Imene
         Queue -> Imene
         Einfach verkettete Liste -> Aicha
@@ -19,18 +19,11 @@ Arbeitsaufteilung
         Priority Queue -> Lukas
         Hashende Menge -> Lukas
 
-Implementierung
+### Implementierung
 
     
     
 
-
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
 ## Add your files
 
