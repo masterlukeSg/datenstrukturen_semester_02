@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.o"
-  "CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.o.d"
+  "CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.o"
+  "CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.o.d"
   "priorityQueue"
   "priorityQueue.pdb"
 )

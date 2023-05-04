@@ -1,0 +1,5 @@
+if(EXISTS "/Users/lukasbaumeister/zettel0/build/demo_1_test[1]_tests.cmake")
+  include("/Users/lukasbaumeister/zettel0/build/demo_1_test[1]_tests.cmake")
+else()
+  add_test(demo_1_test_NOT_BUILT demo_1_test_NOT_BUILT)
+endif()

@@ -69,28 +69,28 @@ include CMakeFiles/priorityQueue.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/priorityQueue.dir/flags.make
 
-CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.o: CMakeFiles/priorityQueue.dir/flags.make
-CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.o: /Users/lukasbaumeister/zettel0/priorityQueue/examples/main.cpp
-CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.o: CMakeFiles/priorityQueue.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lukasbaumeister/zettel0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.o -MF CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.o.d -o CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.o -c /Users/lukasbaumeister/zettel0/priorityQueue/examples/main.cpp
+CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.o: CMakeFiles/priorityQueue.dir/flags.make
+CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.o: /Users/lukasbaumeister/zettel0/priorityQueue/test/test.cpp
+CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.o: CMakeFiles/priorityQueue.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lukasbaumeister/zettel0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.o -MF CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.o.d -o CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.o -c /Users/lukasbaumeister/zettel0/priorityQueue/test/test.cpp
 
-CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lukasbaumeister/zettel0/priorityQueue/examples/main.cpp > CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.i
+CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lukasbaumeister/zettel0/priorityQueue/test/test.cpp > CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.i
 
-CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lukasbaumeister/zettel0/priorityQueue/examples/main.cpp -o CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.s
+CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lukasbaumeister/zettel0/priorityQueue/test/test.cpp -o CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.s
 
 # Object files for target priorityQueue
 priorityQueue_OBJECTS = \
-"CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.o"
+"CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.o"
 
 # External object files for target priorityQueue
 priorityQueue_EXTERNAL_OBJECTS =
 
-priorityQueue: CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.o
+priorityQueue: CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.o
 priorityQueue: CMakeFiles/priorityQueue.dir/build.make
 priorityQueue: CMakeFiles/priorityQueue.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lukasbaumeister/zettel0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable priorityQueue"

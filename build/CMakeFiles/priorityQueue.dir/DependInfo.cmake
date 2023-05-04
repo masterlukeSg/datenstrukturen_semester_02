@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/lukasbaumeister/zettel0/priorityQueue/examples/main.cpp" "CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.o" "gcc" "CMakeFiles/priorityQueue.dir/priorityQueue/examples/main.cpp.o.d"
+  "/Users/lukasbaumeister/zettel0/priorityQueue/test/test.cpp" "CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.o" "gcc" "CMakeFiles/priorityQueue.dir/priorityQueue/test/test.cpp.o.d"
   )
 
 # Targets to which this target links.
