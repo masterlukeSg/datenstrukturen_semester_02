@@ -4,24 +4,24 @@
 
 using namespace ProjectAlpha;
 
-// cmake -S . -B build && cmake --build build 
+// cmake -S . -B build && cmake --build build
 
 TEST(hashendeMengerealisation, find)
 {
 
     hashendeMengerealisation<int> n;
-    n.insert(5);
+    for (int i = 0; i < 10; i++)
+        n.insert(i);
 
-    EXPECT_EQ(n.find(5), true) << "Das Element wurde nicht gefunden";
+    int x = 9;
+    EXPECT_EQ(n.find(x), true) << "Das Element [" << x << "] wurde nicht gefunden";
 }
 
 TEST(hashendeMengerealisation, size)
 {
     hashendeMengerealisation<int> n;
     for (int i = 0; i < 10; i++)
-    {
-        n.insert (i);
-    }
-    EXPECT_EQ(n.size(), 10) << "Die Size der HashendeMenge ist nicht richtig";
+        n.insert(i);
 
+    EXPECT_EQ(n.size(), 10) << "Die Size der HashendeMenge ist nicht richtig";
 }

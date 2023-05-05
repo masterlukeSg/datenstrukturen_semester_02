@@ -178,6 +178,9 @@ void PQueue_realisation<T, Prio>::insert(T data, int prioritaet)
 template <class T, class Prio>
 int PQueue_realisation<T, Prio>::parent(int i)
 {
+    if (i == 0){
+        throw.std::logic_error("Vom Root gibt es kein Parent");
+    }
     int t = (i - 1) / 2;
     return t;
 }
