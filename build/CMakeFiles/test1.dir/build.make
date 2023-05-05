@@ -73,15 +73,15 @@ CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.o: CMakeFiles/test1.dir/flags.
 CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.o: /Users/lukasbaumeister/zettel0/priorityQueue/test/test1.cpp
 CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.o: CMakeFiles/test1.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lukasbaumeister/zettel0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.o -MF CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.o.d -o CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.o -c /Users/lukasbaumeister/zettel0/priorityQueue/test/test1.cpp
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.o -MF CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.o.d -o CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.o -c /Users/lukasbaumeister/zettel0/priorityQueue/test/test1.cpp
 
 CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lukasbaumeister/zettel0/priorityQueue/test/test1.cpp > CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lukasbaumeister/zettel0/priorityQueue/test/test1.cpp > CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.i
 
 CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lukasbaumeister/zettel0/priorityQueue/test/test1.cpp -o CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lukasbaumeister/zettel0/priorityQueue/test/test1.cpp -o CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.s
 
 # Object files for target test1
 test1_OBJECTS = \

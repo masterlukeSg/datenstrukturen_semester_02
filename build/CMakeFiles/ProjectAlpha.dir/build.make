@@ -73,15 +73,15 @@ CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.o: CMakeFiles/Projec
 CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.o: /Users/lukasbaumeister/zettel0/priorityQueue/examples/main.cpp
 CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.o: CMakeFiles/ProjectAlpha.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lukasbaumeister/zettel0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.o -MF CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.o.d -o CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.o -c /Users/lukasbaumeister/zettel0/priorityQueue/examples/main.cpp
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.o -MF CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.o.d -o CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.o -c /Users/lukasbaumeister/zettel0/priorityQueue/examples/main.cpp
 
 CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lukasbaumeister/zettel0/priorityQueue/examples/main.cpp > CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lukasbaumeister/zettel0/priorityQueue/examples/main.cpp > CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.i
 
 CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lukasbaumeister/zettel0/priorityQueue/examples/main.cpp -o CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lukasbaumeister/zettel0/priorityQueue/examples/main.cpp -o CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.s
 
 # Object files for target ProjectAlpha
 ProjectAlpha_OBJECTS = \

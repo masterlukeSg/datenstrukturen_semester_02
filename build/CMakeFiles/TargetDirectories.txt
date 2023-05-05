@@ -1,7 +1,5 @@
 /Users/lukasbaumeister/zettel0/build/CMakeFiles/ProjectAlpha.dir
 /Users/lukasbaumeister/zettel0/build/CMakeFiles/test1.dir
-/Users/lukasbaumeister/zettel0/build/CMakeFiles/package.dir
-/Users/lukasbaumeister/zettel0/build/CMakeFiles/package_source.dir
 /Users/lukasbaumeister/zettel0/build/CMakeFiles/test.dir
 /Users/lukasbaumeister/zettel0/build/CMakeFiles/edit_cache.dir
 /Users/lukasbaumeister/zettel0/build/CMakeFiles/rebuild_cache.dir
@@ -9,8 +7,6 @@
 /Users/lukasbaumeister/zettel0/build/CMakeFiles/install.dir
 /Users/lukasbaumeister/zettel0/build/CMakeFiles/install/local.dir
 /Users/lukasbaumeister/zettel0/build/CMakeFiles/install/strip.dir
-/Users/lukasbaumeister/zettel0/build/_deps/googletest-build/CMakeFiles/package.dir
-/Users/lukasbaumeister/zettel0/build/_deps/googletest-build/CMakeFiles/package_source.dir
 /Users/lukasbaumeister/zettel0/build/_deps/googletest-build/CMakeFiles/test.dir
 /Users/lukasbaumeister/zettel0/build/_deps/googletest-build/CMakeFiles/edit_cache.dir
 /Users/lukasbaumeister/zettel0/build/_deps/googletest-build/CMakeFiles/rebuild_cache.dir
@@ -20,8 +16,6 @@
 /Users/lukasbaumeister/zettel0/build/_deps/googletest-build/CMakeFiles/install/strip.dir
 /Users/lukasbaumeister/zettel0/build/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir
 /Users/lukasbaumeister/zettel0/build/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
-/Users/lukasbaumeister/zettel0/build/_deps/googletest-build/googlemock/CMakeFiles/package.dir
-/Users/lukasbaumeister/zettel0/build/_deps/googletest-build/googlemock/CMakeFiles/package_source.dir
 /Users/lukasbaumeister/zettel0/build/_deps/googletest-build/googlemock/CMakeFiles/test.dir
 /Users/lukasbaumeister/zettel0/build/_deps/googletest-build/googlemock/CMakeFiles/edit_cache.dir
 /Users/lukasbaumeister/zettel0/build/_deps/googletest-build/googlemock/CMakeFiles/rebuild_cache.dir
@@ -31,8 +25,6 @@
 /Users/lukasbaumeister/zettel0/build/_deps/googletest-build/googlemock/CMakeFiles/install/strip.dir
 /Users/lukasbaumeister/zettel0/build/_deps/googletest-build/googletest/CMakeFiles/gtest.dir
 /Users/lukasbaumeister/zettel0/build/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
-/Users/lukasbaumeister/zettel0/build/_deps/googletest-build/googletest/CMakeFiles/package.dir
-/Users/lukasbaumeister/zettel0/build/_deps/googletest-build/googletest/CMakeFiles/package_source.dir
 /Users/lukasbaumeister/zettel0/build/_deps/googletest-build/googletest/CMakeFiles/test.dir
 /Users/lukasbaumeister/zettel0/build/_deps/googletest-build/googletest/CMakeFiles/edit_cache.dir
 /Users/lukasbaumeister/zettel0/build/_deps/googletest-build/googletest/CMakeFiles/rebuild_cache.dir

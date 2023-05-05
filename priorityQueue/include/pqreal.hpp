@@ -30,7 +30,7 @@ public:
      * @return int
      */
     int get_size();
-
+    
     /**
      * @brief  Funktion welche einen Knoten in die PriorityQueue hinzufuegt
      *
@@ -50,6 +50,13 @@ public:
      *
      */
     void print();
+
+    /**
+     * @brief Retunrs the Head object
+     * 
+     * @return T 
+     */
+    T getHead();
 
     /**
      * @brief "Schlange" vector, wo alle hinzugefuegten Daten drinnen gespeichert werden
@@ -127,6 +134,18 @@ int PQueue_realisation<T, Prio>::get_size()
 {
     return size;
 }
+
+
+template <class T,class Prio>
+T PQueue_realisation<T, Prio>::getHead(){
+    if (size == 0){
+        throw std::logic_error("Es gibt keine Elemente zum wiedergeben. (leere Liste)");
+    }
+
+    T result = Schlange[0].get_data();
+    return result;
+}
+
 
 /**
  * @brief Insert Funktion
