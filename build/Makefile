@@ -185,17 +185,17 @@ ProjectAlpha/fast:
 .PHONY : ProjectAlpha/fast
 
 #=============================================================================
-# Target rules for targets named test1
+# Target rules for targets named test2
 
 # Build rule for target.
-test1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test1
-.PHONY : test1
+test2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test2
+.PHONY : test2
 
 # fast build rule for target.
-test1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/build
-.PHONY : test1/fast
+test2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/build
+.PHONY : test2/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -249,6 +249,30 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+HashendeMenge/test/test1.o: HashendeMenge/test/test1.cpp.o
+.PHONY : HashendeMenge/test/test1.o
+
+# target to build an object file
+HashendeMenge/test/test1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/HashendeMenge/test/test1.cpp.o
+.PHONY : HashendeMenge/test/test1.cpp.o
+
+HashendeMenge/test/test1.i: HashendeMenge/test/test1.cpp.i
+.PHONY : HashendeMenge/test/test1.i
+
+# target to preprocess a source file
+HashendeMenge/test/test1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/HashendeMenge/test/test1.cpp.i
+.PHONY : HashendeMenge/test/test1.cpp.i
+
+HashendeMenge/test/test1.s: HashendeMenge/test/test1.cpp.s
+.PHONY : HashendeMenge/test/test1.s
+
+# target to generate assembly for a file
+HashendeMenge/test/test1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/HashendeMenge/test/test1.cpp.s
+.PHONY : HashendeMenge/test/test1.cpp.s
+
 priorityQueue/examples/main.o: priorityQueue/examples/main.cpp.o
 .PHONY : priorityQueue/examples/main.o
 
@@ -273,30 +297,6 @@ priorityQueue/examples/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectAlpha.dir/build.make CMakeFiles/ProjectAlpha.dir/priorityQueue/examples/main.cpp.s
 .PHONY : priorityQueue/examples/main.cpp.s
 
-priorityQueue/test/test1.o: priorityQueue/test/test1.cpp.o
-.PHONY : priorityQueue/test/test1.o
-
-# target to build an object file
-priorityQueue/test/test1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.o
-.PHONY : priorityQueue/test/test1.cpp.o
-
-priorityQueue/test/test1.i: priorityQueue/test/test1.cpp.i
-.PHONY : priorityQueue/test/test1.i
-
-# target to preprocess a source file
-priorityQueue/test/test1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.i
-.PHONY : priorityQueue/test/test1.cpp.i
-
-priorityQueue/test/test1.s: priorityQueue/test/test1.cpp.s
-.PHONY : priorityQueue/test/test1.s
-
-# target to generate assembly for a file
-priorityQueue/test/test1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.s
-.PHONY : priorityQueue/test/test1.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -315,13 +315,13 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... test1"
+	@echo "... test2"
+	@echo "... HashendeMenge/test/test1.o"
+	@echo "... HashendeMenge/test/test1.i"
+	@echo "... HashendeMenge/test/test1.s"
 	@echo "... priorityQueue/examples/main.o"
 	@echo "... priorityQueue/examples/main.i"
 	@echo "... priorityQueue/examples/main.s"
-	@echo "... priorityQueue/test/test1.o"
-	@echo "... priorityQueue/test/test1.i"
-	@echo "... priorityQueue/test/test1.s"
 .PHONY : help
 
 

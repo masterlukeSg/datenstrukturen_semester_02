@@ -57,33 +57,23 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lukasbaumeister/zettel0
+CMAKE_SOURCE_DIR = /Users/lukasbaumeister/zettel0/priorityQueue
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lukasbaumeister/zettel0/build
+CMAKE_BINARY_DIR = /Users/lukasbaumeister/zettel0/priorityQueue/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	/Applications/CMake.app/Contents/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/Applications/CMake.app/Contents/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target package
-package/fast: package
-.PHONY : package/fast
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/Applications/CMake.app/Contents/bin/cpack --config ./CPackSourceConfig.cmake /Users/lukasbaumeister/zettel0/build/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-.PHONY : package_source/fast
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -105,11 +95,56 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CMake.app/Contents/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CMake.app/Contents/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lukasbaumeister/zettel0/build/CMakeFiles /Users/lukasbaumeister/zettel0/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lukasbaumeister/zettel0/priorityQueue/build/CMakeFiles /Users/lukasbaumeister/zettel0/priorityQueue/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lukasbaumeister/zettel0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lukasbaumeister/zettel0/priorityQueue/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -149,29 +184,118 @@ ProjectAlpha/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectAlpha.dir/build.make CMakeFiles/ProjectAlpha.dir/build
 .PHONY : ProjectAlpha/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+#=============================================================================
+# Target rules for targets named test1
+
+# Build rule for target.
+test1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test1
+.PHONY : test1
+
+# fast build rule for target.
+test1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/build
+.PHONY : test1/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+examples/main.o: examples/main.cpp.o
+.PHONY : examples/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectAlpha.dir/build.make CMakeFiles/ProjectAlpha.dir/main.cpp.o
-.PHONY : main.cpp.o
+examples/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectAlpha.dir/build.make CMakeFiles/ProjectAlpha.dir/examples/main.cpp.o
+.PHONY : examples/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+examples/main.i: examples/main.cpp.i
+.PHONY : examples/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectAlpha.dir/build.make CMakeFiles/ProjectAlpha.dir/main.cpp.i
-.PHONY : main.cpp.i
+examples/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectAlpha.dir/build.make CMakeFiles/ProjectAlpha.dir/examples/main.cpp.i
+.PHONY : examples/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+examples/main.s: examples/main.cpp.s
+.PHONY : examples/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectAlpha.dir/build.make CMakeFiles/ProjectAlpha.dir/main.cpp.s
-.PHONY : main.cpp.s
+examples/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectAlpha.dir/build.make CMakeFiles/ProjectAlpha.dir/examples/main.cpp.s
+.PHONY : examples/main.cpp.s
+
+test/test1.o: test/test1.cpp.o
+.PHONY : test/test1.o
+
+# target to build an object file
+test/test1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/test/test1.cpp.o
+.PHONY : test/test1.cpp.o
+
+test/test1.i: test/test1.cpp.i
+.PHONY : test/test1.i
+
+# target to preprocess a source file
+test/test1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/test/test1.cpp.i
+.PHONY : test/test1.cpp.i
+
+test/test1.s: test/test1.cpp.s
+.PHONY : test/test1.s
+
+# target to generate assembly for a file
+test/test1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/test/test1.cpp.s
+.PHONY : test/test1.cpp.s
 
 # Help Target
 help:
@@ -180,13 +304,24 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... package"
-	@echo "... package_source"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... ProjectAlpha"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
+	@echo "... test1"
+	@echo "... examples/main.o"
+	@echo "... examples/main.i"
+	@echo "... examples/main.s"
+	@echo "... test/test1.o"
+	@echo "... test/test1.i"
+	@echo "... test/test1.s"
 .PHONY : help
 
 

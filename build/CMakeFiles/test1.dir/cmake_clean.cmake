@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.o"
-  "CMakeFiles/test1.dir/priorityQueue/test/test1.cpp.o.d"
+  "CMakeFiles/test1.dir/HashendeMenge/test/test1.cpp.o"
+  "CMakeFiles/test1.dir/HashendeMenge/test/test1.cpp.o.d"
   "test1"
   "test1.pdb"
   "test1[1]_tests.cmake"

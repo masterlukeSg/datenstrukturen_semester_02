@@ -1,0 +1,5 @@
+add_test([=[hashendeMengerealisation.find]=]  /Users/lukasbaumeister/zettel0/HashendeMenge/build/test1 [==[--gtest_filter=hashendeMengerealisation.find]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[hashendeMengerealisation.find]=]  PROPERTIES WORKING_DIRECTORY /Users/lukasbaumeister/zettel0/HashendeMenge/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[hashendeMengerealisation.size]=]  /Users/lukasbaumeister/zettel0/HashendeMenge/build/test1 [==[--gtest_filter=hashendeMengerealisation.size]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[hashendeMengerealisation.size]=]  PROPERTIES WORKING_DIRECTORY /Users/lukasbaumeister/zettel0/HashendeMenge/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  test1_TESTS hashendeMengerealisation.find hashendeMengerealisation.size)

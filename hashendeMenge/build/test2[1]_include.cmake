@@ -1,0 +1,5 @@
+if(EXISTS "/Users/lukasbaumeister/zettel0/HashendeMenge/build/test2[1]_tests.cmake")
+  include("/Users/lukasbaumeister/zettel0/HashendeMenge/build/test2[1]_tests.cmake")
+else()
+  add_test(test2_NOT_BUILT test2_NOT_BUILT)
+endif()
