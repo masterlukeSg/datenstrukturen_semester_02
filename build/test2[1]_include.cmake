@@ -1,0 +1,5 @@
+if(EXISTS "/home/odin/zettel0/build/test2[1]_tests.cmake")
+  include("/home/odin/zettel0/build/test2[1]_tests.cmake")
+else()
+  add_test(test2_NOT_BUILT test2_NOT_BUILT)
+endif()

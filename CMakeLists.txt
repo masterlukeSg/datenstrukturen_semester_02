@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
 project(ProjectAlpha VERSION 0.1.0)
 set(CMAKE_CXX_STANDARD 17)
-add_executable(ProjectAlpha examples/afg1.cpp)
+add_executable(ProjectAlpha stack/examples/afg1.cpp)
+
 
 include(FetchContent)
 if (CMAKE_VERSION VERSION_GREATER_EQUAL "3.24.0")
@@ -9,17 +10,26 @@ if (CMAKE_VERSION VERSION_GREATER_EQUAL "3.24.0")
 endif()
 
 
-FetchContent_Declare{
+
+
+FetchContent_Declare(
     googletest
     URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
-}
+)
 
 
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
-FetchCOntent_MakeAvailable(googletest)
+FetchContent_MakeAvailable(googletest)
 include(GoogleTest)
 
 enable_testing()
 
-add_executable()
+add_executable(test1 stack/test/test1.cpp)
+target_link_libraries(test1 GTest::gtest_main)
+gtest_discover_tests(test1)
+
+
+add_executable(test2 queue/test/test2.cpp)
+target_link_libraries(test2 GTest::gtest_main)
+gtest_discover_tests(test2)

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/ProjectAlpha.dir/stack/examples/afg1.cpp.o -o ProjectAlpha 
