@@ -42,7 +42,7 @@ namespace ProjectAlpha {
     }
 
     template <class T>
-    T queue<T>::peekFirst() {
+    T queue<T>::peekLast() {
         if (isEmpty()) {
             throw std::out_of_range("Queue is Empty\n");
 

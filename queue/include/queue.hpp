@@ -17,7 +17,7 @@ namespace ProjectAlpha{
         T pop() override;
         int getSize() override;
         T peekTop();
-        T peekFirst();
+        T peekLast();
         bool isEmpty();
         void queueDisplay() const;
 

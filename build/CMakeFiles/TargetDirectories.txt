@@ -1,5 +1,6 @@
 /home/odin/zettel0/build/CMakeFiles/ProjectAlpha.dir
 /home/odin/zettel0/build/CMakeFiles/test1.dir
+/home/odin/zettel0/build/CMakeFiles/test2.dir
 /home/odin/zettel0/build/CMakeFiles/test.dir
 /home/odin/zettel0/build/CMakeFiles/edit_cache.dir
 /home/odin/zettel0/build/CMakeFiles/rebuild_cache.dir

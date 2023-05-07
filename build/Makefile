@@ -198,6 +198,19 @@ test1/fast:
 .PHONY : test1/fast
 
 #=============================================================================
+# Target rules for targets named test2
+
+# Build rule for target.
+test2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test2
+.PHONY : test2
+
+# fast build rule for target.
+test2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/build
+.PHONY : test2/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -248,6 +261,30 @@ gtest_main: cmake_check_build_system
 gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
+
+queue/test/test2.o: queue/test/test2.cpp.o
+.PHONY : queue/test/test2.o
+
+# target to build an object file
+queue/test/test2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/queue/test/test2.cpp.o
+.PHONY : queue/test/test2.cpp.o
+
+queue/test/test2.i: queue/test/test2.cpp.i
+.PHONY : queue/test/test2.i
+
+# target to preprocess a source file
+queue/test/test2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/queue/test/test2.cpp.i
+.PHONY : queue/test/test2.cpp.i
+
+queue/test/test2.s: queue/test/test2.cpp.s
+.PHONY : queue/test/test2.s
+
+# target to generate assembly for a file
+queue/test/test2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/queue/test/test2.cpp.s
+.PHONY : queue/test/test2.cpp.s
 
 stack/examples/afg1.o: stack/examples/afg1.cpp.o
 .PHONY : stack/examples/afg1.o
@@ -316,6 +353,10 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... test1"
+	@echo "... test2"
+	@echo "... queue/test/test2.o"
+	@echo "... queue/test/test2.i"
+	@echo "... queue/test/test2.s"
 	@echo "... stack/examples/afg1.o"
 	@echo "... stack/examples/afg1.i"
 	@echo "... stack/examples/afg1.s"
