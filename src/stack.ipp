@@ -16,8 +16,8 @@ namespace ProjectAlpha{
     template<class T>
     T stack<T>::pop(){
         if (isempty()){
-            std::cout << "Stack is Empty\n";
-            return T();
+            throw std::out_of_range("Stack is Empty\n");    //std::cout << "Stack is Empty\n";
+            
         } else {
             T value = list.remove_front()->data_;
             return value;
@@ -27,8 +27,8 @@ namespace ProjectAlpha{
     template<class T>
     T stack<T>::peek(){
         if (isempty()){
-            std::cout << "Stack is Empty\n";
-            return T();
+            throw std::out_of_range("Stack is Empty\n");
+            
         } else{
             return list.gethead()->data_;
         }
