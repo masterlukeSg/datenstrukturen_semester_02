@@ -4,19 +4,40 @@
 #include <vector>
 #include <string>
 
+// cmake -S . -B build && cmake --build build
+
 using namespace ProjectAlpha;
 
 int main()
 {
-    PQueue_realisation<std::string, int> pq = PQueue_realisation<std::string, int>();
-    pq.insert("5", 1);
-    pq.insert("7", 5);
-    pq.insert("100", 4);
-    pq.insert("9", 10);
-    pq.insert("22", 0);
-    pq.insert("44", 22);
+    PQueue_realisation<int, int> pq = PQueue_realisation<int, int>();
+    int z = 100;
 
-    //pq.remove();
+    for (int y = 0; y < 6; y++)
+    {
+        std::chrono::time_point<std::chrono::steady_clock> start, end, ergebnis;
 
-    pq.print();
+        for (int i = 0; i < z; i++)
+        {
+            int prio = rand() % 20;
+            pq.insert(i, prio);
+        }
+
+        start = std::chrono::steady_clock::now();
+
+        // pq.insert(7,5);
+        //pq.remove();
+        pq.get_size();
+
+        end = std::chrono::steady_clock::now();
+
+        std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
+
+        
+        std::cout << "Für die Anzahl: " << z << "  \nGeschwindigkeit: " << std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count() << std::endl;
+        z = z * 10;
+    }
+    // pq.remove();
+
+    // pq.print();
 }

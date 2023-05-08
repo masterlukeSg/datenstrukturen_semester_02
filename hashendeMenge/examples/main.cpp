@@ -1,46 +1,27 @@
 #include <iostream>
 #include <memory>
 #include <string>
+
 #include "../src/hashendeMengerealisation.cpp"
 
 using namespace ProjectAlpha;
 
 // clang++ -std=c++17 -I./include src/hashendeMengeRealisation.cpp examples/main.cpp -o
 
+int main()
+{
 
-int main(){
-    hashendeMengerealisation<std::string> n;
-    n.insert("5");
-    n.insert("10");
-    n.insert("18");
-    n.insert("100");
-    n.insert("kein");
-    n.insert("blas");
-    n.insert("A");
-    n.insert("B");
-    n.insert("C");
-    n.insert("D");
-    n.insert("E");
-    n.insert("F");
-    n.insert("G");
-    n.insert("H");
-    n.insert("I");
-    n.insert("J");
-    n.insert("K");
-    n.insert("L");
-    n.insert("M");
-    n.insert("N");
-    n.insert("O");
-    n.insert("P");
-    n.insert("Q");
-    n.insert("R");
-    n.insert("S");
-    n.insert("T");
-    n.insert("U");
-    n.insert("V");
-    n.insert("W");
-    //n.insert("W");
-    //n.remove("Z");
-    n.print();    
+    hashendeMengerealisation<int> n;
+   
+    for (int i = 0; i < 100; i++)
+    {
+        n.insert(i);
+    }
+
+   
+    //std::cout << ergebnis.max() << std::endl;
+   // std::cout << ergebnis.min()<< std::endl;
+    // n.insert("W");
+    // n.remove("Z");
+    n.print();
 }
-

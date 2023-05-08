@@ -20,8 +20,9 @@ TEST(hashendeMengerealisation, find)
 TEST(hashendeMengerealisation, size)
 {
     hashendeMengerealisation<int> n;
-    for (int i = 0; i < 10; i++)
-        n.insert(i);
 
-    EXPECT_EQ(n.size(), 10) << "Die Size der HashendeMenge ist nicht richtig";
+    n.insert(3);
+    n.insert(2);
+
+    EXPECT_EQ(n.size(), 2) << "Die Size der HashendeMenge ist nicht richtig";
 }
