@@ -19,7 +19,7 @@ namespace ProjectAlpha {
     template <class T>
     T queue<T>::pop() {
         if (isEmpty()) {
-            throw std::out_of_range("Queue is Empty\n");
+            throw std::logic_error("Queue is Empty\n");
             
         } else {
             T value = list.remove_front()->data_;
@@ -35,7 +35,7 @@ namespace ProjectAlpha {
     template <class T>
     T queue<T>::peekTop() {
         if (isEmpty()) {
-            throw std::out_of_range("Queue is Empty\n");
+            throw std::logic_error("Queue is Empty\n");
         } else {
             return list.get_first()->data_;
         }
@@ -44,7 +44,7 @@ namespace ProjectAlpha {
     template <class T>
     T queue<T>::peekLast() {
         if (isEmpty()) {
-            throw std::out_of_range("Queue is Empty\n");
+            throw std::logic_error("Queue is Empty\n");
 
         } else {
             return list.get_last()->data_;
