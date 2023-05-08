@@ -26,17 +26,17 @@ int main()
         start = std::chrono::steady_clock::now();
 
         // pq.insert(7,5);
-        //pq.remove();
+        // pq.remove();
         pq.get_size();
 
         end = std::chrono::steady_clock::now();
 
         std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
 
-        
         std::cout << "Für die Anzahl: " << z << "  \nGeschwindigkeit: " << std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count() << std::endl;
         z = z * 10;
     }
+
     // pq.remove();
 
     // pq.print();
