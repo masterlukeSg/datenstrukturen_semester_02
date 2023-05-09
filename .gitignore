@@ -10,4 +10,5 @@
 /examples/afg1.dSYM/*
 /examples/main.dSYM/*
 .idea/*
+.DS_Store/*
 /build/
