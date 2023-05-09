@@ -2,7 +2,7 @@
 
 ### Arbeitsaufteilung
 
-## Aufgabe 1: Interface + UML
+## Aufgabe 1.1: Interface + UML
         Stack -> Imene
         Queue -> Imene
         Einfach verkettete Liste -> Aicha
@@ -12,13 +12,32 @@
         Geordnete Menge -> Lukas 
 
     
-## Aufgabe 2: Implementierung
+## Aufgabe 1.2: Implementierung
         Stack -> Imene
         Queue -> Imene
         Einfach verkettete Liste -> Aicha
         Doppelt verkettete Liste -> Aicha
         Priority Queue -> Lukas
         Hashende Menge -> Lukas
+
+
+## Aufgabe 2.2: Throw 
+        Queue -> Imene
+        Stack -> Imene
+        Hashende Menge -> Lukas
+        Priority Queue -> Lukas
+
+
+## Aufgabe 2.3: Untitest
+        Queue -> Imene
+        Stack -> Imene
+        Hashende Menge -> Lukas
+        Priority Queue -> Lukas
+
+
+## Aufgabe 3.1: Laufzeittest
+        Priority Queue -> Lukas
+
 
 ### Implementierung
 
