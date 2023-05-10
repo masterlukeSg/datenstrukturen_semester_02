@@ -13,22 +13,42 @@ namespace ProjectAlpha{
     }
 
   template <class T>
-    // initializing head and tail (as nullptr)
+    /**
+     * @brief Construct a new Doubly Linked List< T>:: Doubly Linked List object
+     * initializing head and tail (as nullptr)
+     */
     DoublyLinkedList<T>::DoublyLinkedList(){
         head = nullptr;
         tail = nullptr;
     }
-    
+ 
   template <class T>
-    // returns first node of the current list (head)
+    /**
+     * @brief std::shared_ptr<DoublyLinkedListNode<T>> DoublyLinkedList<T>::get_first()
+      
+     * @return std::shared_ptr<DoublyLinkedListNode<T>> - returns first node of the current list (head)
+
+     */
     std::shared_ptr<DoublyLinkedListNode<T>> DoublyLinkedList<T>::get_first() {
+        if (head ==nullptr){
+            throw std::logic_error("Liste ist leer");
+        }
         return head;
     }
     
    template <class T>
     // returns last node of the current list (tail)
+    /**
+     * @brief get_last
+     * 
+     * @return std::shared_ptr<DoublyLinkedListNode<T>> 
+     */
     std::shared_ptr<DoublyLinkedListNode<T>> DoublyLinkedList<T>::get_last(){
-        return tail;
+     if (tail== nullptr){
+        throw std::logic_error("Liste ist leer");
+     }
+
+     return tail;
     }
     
      template <class T>
@@ -89,6 +109,9 @@ namespace ProjectAlpha{
     template <class T>
     // returns the next pointer of the given pointer
     std::shared_ptr<DoublyLinkedListNode<T>> DoublyLinkedList<T>::next(const std::shared_ptr<DoublyLinkedListNode<T>>& n) {
+        if (n->next ==nullptr){
+            throw std::out_of_range("Das Element hat keinen Nachfolger")
+        }
         return n->next;
     } 
 

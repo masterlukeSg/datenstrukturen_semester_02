@@ -3,10 +3,6 @@
 #include "../include/listnode.hpp"
 #include "../src/linkedlist.cpp"
 #include <memory>
-//#include <Doubly_Linked_List.hpp>
-
-
-
 
 //
 // Entry point of the program execution...
@@ -14,29 +10,9 @@
  using namespace ProjectAlpha;
 
  int main() {
-    /**List<int> liste;
-
-    liste.insert_front(15);
-    liste.insert_front(17);
-    liste.insert_front(9);
-    liste.print();
-    liste.remove_front();
-    liste.print(); */   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   try{
     List<int> liste;
-    
-      std::shared_ptr<ListNode<int>> current;
+    std::shared_ptr<ListNode<int>> current;
 
     // prints the (empty) list
     liste.print();
@@ -67,7 +43,8 @@
   
 }
 
+catch(std::logic_error E){
+  std::cout<<"Ausnahme"<< E.what()<< "behandelt" << std::endl;
+}
 
-
-
- 
+}

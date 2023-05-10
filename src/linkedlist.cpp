@@ -3,7 +3,7 @@
 #include "iostream"
 #include <memory>
 
-namespace ProjectAlpha{
+namespace ProjectAlpha{ 
     template<class T>
    // creating a new node with given data and a nullptr to next node
     ListNode<T>::ListNode (T data) {
@@ -47,8 +47,9 @@ namespace ProjectAlpha{
     // removing a pointer at the beginning of the list
     std::shared_ptr<ListNode<T>> List<T>::remove_front (){
         if (!head){ // if we have an empty list we do not need to remove anything
+          throw std::length_error("Es exstieren keine Elemente zum Entfernen")}
             return nullptr;
-        }
+        
         std::shared_ptr<ListNode<T>> new_head = head->next; // creating a new head pointing to the next object of current head
         head = new_head; // new head is from now on the head
         return head;
@@ -68,6 +69,9 @@ namespace ProjectAlpha{
     template <class T>
     // returns the next pointer of the given pointer
     std::shared_ptr<ListNode<T>> List<T>::next (const std::shared_ptr<ListNode<T>>& current){
+        if(current -> next == nullptr){
+            throw std::out_of_range("Das Element hat kein Nachfolger")
+        }
         return current -> next;
     }
 

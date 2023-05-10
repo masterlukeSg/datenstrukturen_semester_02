@@ -12,6 +12,7 @@
  using namespace ProjectAlpha;
 
 int main (){
+  try{
   DoublyLinkedList<int> Liste;
   std::shared_ptr<DoublyLinkedListNode<int>> current;
 
@@ -44,8 +45,10 @@ int main (){
   Liste.remove(current->next->next);
   Liste.print();
 }
-
+catch(std::logic_error st){
+  std::cout<<"Ausnahme"<< st.what()<< "behandelt" << std::endl;
+  }
 
 
   
-
+}
