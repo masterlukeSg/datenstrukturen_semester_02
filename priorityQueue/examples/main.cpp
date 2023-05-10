@@ -33,7 +33,9 @@ int main()
             }
             // startet die Clock
             start = std::chrono::steady_clock::now();
-            pq.insert(4, 4);
+            //pq.remove();
+            //pq.insert(4,4);
+            pq.get_size();
             // endet die Clock
             end = std::chrono::steady_clock::now();
 
@@ -41,7 +43,9 @@ int main()
 
             // startet die Clock
             start = std::chrono::steady_clock::now();
-            stdandardBib.push(4);
+            //stdandardBib.pop();
+            //stdandardBib.push(4);
+            stdandardBib.size();
             // endet die Clock
             end = std::chrono::steady_clock::now();
 

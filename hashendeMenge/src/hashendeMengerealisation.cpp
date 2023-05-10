@@ -47,7 +47,7 @@ void hashendeMengerealisation<T>::insert(const T x)
 {
      if (find(x))
      {
-          throw std::logic_error ("Das Element existiert bereits!");
+          throw std::logic_error("Das Element existiert bereits!");
           return;
      }
      double s = size();
@@ -63,6 +63,7 @@ void hashendeMengerealisation<T>::insert(const T x)
           insert(x);
      }
 }
+
 /**
  * @brief remove fkt
  * Wenn Element ex und size/numbuckest größer 0.25: element durch übergabe und hashfkt errechnet. Element entfernen.
@@ -75,7 +76,7 @@ void hashendeMengerealisation<T>::remove(const T &x)
 {
      if (not find(x))
      {
-          throw std::logic_error ("Das Element konnte nicht gefunden werden!");
+          throw std::logic_error("Das Element konnte nicht gefunden werden!");
           return;
      }
      double s = size();
