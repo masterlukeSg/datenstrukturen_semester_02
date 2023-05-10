@@ -4,8 +4,14 @@
 #include <memory>
 
 namespace ProjectAlpha{ 
+
+    /**
+     * @brief List Node()
+     * creating a new node with given data and a nullptr to next node
+     * @tparam T 
+     * @param data 
+     */
     template<class T>
-   // creating a new node with given data and a nullptr to next node
     ListNode<T>::ListNode (T data) {
         data_ = data;
         next = nullptr;
@@ -16,8 +22,14 @@ namespace ProjectAlpha{
     head = nullptr;
     }
 
+    /**
+     * @brief insert_front()
+     * inserting at the front of the list
+     * @tparam T 
+     * @param x 
+     * @return std::shared_ptr<ListNode<T>> 
+     */
     template <class T>
-    // inserting given integer at the front of the list
     std::shared_ptr<ListNode<T>> List<T>::insert_front (T x) {
         std::shared_ptr<ListNode<T>> new_node = std::make_shared<ListNode<T>>(x); //creating node
         new_node->next = head; // changing next pointer to the current head
@@ -26,8 +38,16 @@ namespace ProjectAlpha{
         return head;
     }
 
+
+    /**
+     * @brief insert_after()
+     * inserting after the given pointer
+     * @tparam T 
+     * @param current 
+     * @param x 
+     * @return std::shared_ptr<ListNode<T>> 
+     */
     template <class T>
-    // inserting given integer after the given pointer
     std::shared_ptr<ListNode<T>> List<T>::insert_after (const std::shared_ptr<ListNode<T>>& current, T x){
         if (current == nullptr){ // given node can not be a nullptr
             std::cout << "the node does not exist" << std::endl;
@@ -43,8 +63,14 @@ namespace ProjectAlpha{
         return new_node;
     }
      
+
+     /**
+      * @brief remove_front()
+      * removing a pointer at the beginning of the list
+      * @tparam T 
+      * @return std::shared_ptr<ListNode<T>> 
+      */
      template <class T>
-    // removing a pointer at the beginning of the list
     std::shared_ptr<ListNode<T>> List<T>::remove_front (){
         if (!head){ // if we have an empty list we do not need to remove anything
           throw std::length_error("Es exstieren keine Elemente zum Entfernen")}
@@ -54,9 +80,15 @@ namespace ProjectAlpha{
         head = new_head; // new head is from now on the head
         return head;
     }
-      
+
+
+    /**
+     * @brief remove_after()
+     * removing a pointer after the given pointer
+     * @param current 
+     * @return * template <class T> 
+     */
     template <class T>
-    // removing a pointer after the given pointer
     std::shared_ptr<ListNode<T>> List<T>::remove_after (const std::shared_ptr<ListNode<T>>& current){
         if (current -> next == nullptr) { // if the list ends after the given pointer then nothing can be removed
             return nullptr;
@@ -66,8 +98,14 @@ namespace ProjectAlpha{
         return current -> next;
     }
 
+    /**
+     * @brief next()
+     * returns the next pointer of the given pointer
+     * @tparam T 
+     * @param current 
+     * @return std::shared_ptr<ListNode<T>> 
+     */
     template <class T>
-    // returns the next pointer of the given pointer
     std::shared_ptr<ListNode<T>> List<T>::next (const std::shared_ptr<ListNode<T>>& current){
         if(current -> next == nullptr){
             throw std::out_of_range("Das Element hat kein Nachfolger")
@@ -75,8 +113,12 @@ namespace ProjectAlpha{
         return current -> next;
     }
 
+    /**
+     * @brief print()
+     * prints the whole list
+     * @tparam T 
+     */
     template <class T>
-    // prints the whole list
     void List<T>::print() const{
         std::shared_ptr<ListNode<T>> iterator_node = head; // creating an iterator that starts at the head
         // prints out data of the node until iterator is a nullptr

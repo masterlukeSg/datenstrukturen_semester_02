@@ -12,8 +12,6 @@ namespace ProjectAlpha {
 
         public :
 
-        
-        //virtual std::shared_ptr<ListNode<T>> get_head()=0;
         virtual std::shared_ptr<ListNode<T>> next(const std::shared_ptr<ListNode<T>>&)=0;
         virtual std::shared_ptr<ListNode<T>> insert_front(T)=0;
         virtual std::shared_ptr<ListNode<T>> remove_front()=0;

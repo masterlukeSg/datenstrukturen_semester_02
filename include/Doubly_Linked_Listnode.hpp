@@ -5,31 +5,35 @@ namespace ProjectAlpha {
 
 template <class T>
 
-// A DoublyLinkedListNode stores its sucessor and predecessor
 class DoublyLinkedListNode{
 public:
+/**
+ * @brief DoublyLinkedListNode()
+ * Construct a new Doubly Linked List Node object
+ * @param data 
+ */
  DoublyLinkedListNode( T data);
 
-// Für ein nachvollziehbares Projekt sollte der folgende, schlechte Stil (!)
-// nicht verwendet werden. Der schlechte Stil (Membervariablen sind public) wird
-// hier nur deshalb verwendet, um die Datenstruktur schnell zu entwickeln.
+
 public:
+/**
+ * @brief next
+ * gets the next node after a given pointer
+ */
   std::shared_ptr<DoublyLinkedListNode<T>> next;
+/**
+ * @brief prev
+ * gets the previous node from a given pointer
+ */
   std::weak_ptr<DoublyLinkedListNode<T>> prev;
 
-  
+/**
+ * @brief data
+ * gives the data of a node
+ */
   T data_;
 };
 
-// In the end, the DoublyLinkedListNode are dynamically organized on the heap.
-// Therefore, we use Shared Pointer for the organization of DoublyLinkedListNode.
-// It will turn out, that shared_ptr is the best way because we want
-// to iterate through the nodes (i.e., we want multiple references at once).
-
-// The type "std::shared_ptr<DoublyLinkedListNode>" is abbriviated with "DListNodeptr"
-//typedef std::shared_ptr<DoublyLinkedListNode<class T>> DListNodeptr;
-// The type "std::weak_ptr<DoublyLinkedListNode>" is abbriviated with "WeakDListNodeptr"
-//typedef std::weak_ptr<DoublyLinkedListNode<class T>> WeakDListNodeptr;
 
 }
 
