@@ -38,6 +38,7 @@
 
 ## Aufgabe 3.1: Laufzeittest
         Priority Queue -> Lukas
+        Hashende Menge -> Lukas
 
 
 ### Implementierung
@@ -47,7 +48,9 @@
         project(ProjectAlpha VERSION 0.1.0)
         set(CMAKE_CXX_STANDARD 17)
         add_executable(ProjectAlpha priorityQueue/examples/main.cpp)
+        
 
+        Zum ausführen: cmake -S . -B build && cmake --build build   
 
     
     
