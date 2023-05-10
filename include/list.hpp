@@ -56,12 +56,16 @@ namespace ProjectAlpha
          */
         void print() const;
 
+
+
     private:
         /**
          * @brief head
          *Ist das erste Element der Liste
          */
         std::shared_ptr<ListNode<T>> head;
+        T getHead();
+
     };
 
 }

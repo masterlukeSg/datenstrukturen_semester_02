@@ -98,6 +98,15 @@ namespace ProjectAlpha{
         return current -> next;
     }
 
+
+
+    template<class T>
+    T List<T>::getHead(){
+        return head->data_;
+    }
+
+
+
     /**
      * @brief next()
      * returns the next pointer of the given pointer
