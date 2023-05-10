@@ -11,6 +11,9 @@
         Hashende Menge -> Lukas
         Geordnete Menge -> Lukas 
 
+        UML Merge:
+        Aicha 
+
     
 ## Aufgabe 1.2: Implementierung
         Stack -> Imene
@@ -41,6 +44,8 @@
         ![alt text](https://github.com/baumeisterl0/zettel0/blob/main/removePrio.png?raw=true)
 
         Hashende Menge -> Lukas
+
+
 
 
 ### Implementierung
