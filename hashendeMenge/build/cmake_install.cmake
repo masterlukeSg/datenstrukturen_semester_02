@@ -1,4 +1,4 @@
-# Install script for directory: /Users/lukasbaumeister/zettel0/HashendeMenge
+# Install script for directory: /Users/lukasbaumeister/zettel0/hashendeMenge
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/lukasbaumeister/zettel0/HashendeMenge/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/lukasbaumeister/zettel0/hashendeMenge/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

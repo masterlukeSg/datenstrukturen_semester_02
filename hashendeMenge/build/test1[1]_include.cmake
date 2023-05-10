@@ -1,5 +1,5 @@
-if(EXISTS "/Users/lukasbaumeister/zettel0/HashendeMenge/build/test1[1]_tests.cmake")
-  include("/Users/lukasbaumeister/zettel0/HashendeMenge/build/test1[1]_tests.cmake")
+if(EXISTS "/Users/lukasbaumeister/zettel0/hashendeMenge/build/test1[1]_tests.cmake")
+  include("/Users/lukasbaumeister/zettel0/hashendeMenge/build/test1[1]_tests.cmake")
 else()
   add_test(test1_NOT_BUILT test1_NOT_BUILT)
 endif()

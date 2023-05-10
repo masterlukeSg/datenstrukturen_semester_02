@@ -45,10 +45,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Darwin.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.24/Modules/Platform/UnixPaths.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake"
-  "/Users/lukasbaumeister/zettel0/HashendeMenge/CMakeLists.txt"
-  "CMakeFiles/3.24.3/CMakeCCompiler.cmake"
-  "CMakeFiles/3.24.3/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.24.3/CMakeSystem.cmake"
   "_deps/googletest-src/CMakeLists.txt"
   "_deps/googletest-src/googlemock/CMakeLists.txt"
   "_deps/googletest-src/googlemock/cmake/gmock.pc.in"
@@ -58,6 +54,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/googletest-src/googletest/cmake/gtest.pc.in"
   "_deps/googletest-src/googletest/cmake/gtest_main.pc.in"
   "_deps/googletest-src/googletest/cmake/internal_utils.cmake"
+  "/Users/lukasbaumeister/zettel0/hashendeMenge/CMakeLists.txt"
+  "CMakeFiles/3.24.3/CMakeCCompiler.cmake"
+  "CMakeFiles/3.24.3/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.24.3/CMakeSystem.cmake"
   )
 
 # The corresponding makefile is:

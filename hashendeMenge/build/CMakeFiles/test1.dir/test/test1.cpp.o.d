@@ -1,5 +1,5 @@
 CMakeFiles/test1.dir/test/test1.cpp.o: \
-  /Users/lukasbaumeister/zettel0/HashendeMenge/test/test1.cpp \
+  /Users/lukasbaumeister/zettel0/hashendeMenge/test/test1.cpp \
   /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-src/googletest/include/gtest/gtest.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/cstddef \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__assert \
@@ -780,8 +780,8 @@ CMakeFiles/test1.dir/test/test1.cpp.o: \
   /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
   /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
   /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
-  /Users/lukasbaumeister/zettel0/HashendeMenge/test/../src/hashendeMengerealisation.cpp \
-  /Users/lukasbaumeister/zettel0/HashendeMenge/test/../src/../include/list.hpp \
-  /Users/lukasbaumeister/zettel0/HashendeMenge/test/../src/../include/listnode.hpp \
-  /Users/lukasbaumeister/zettel0/HashendeMenge/test/../src/../include/hashendeMengerealisation.hpp \
-  /Users/lukasbaumeister/zettel0/HashendeMenge/test/../src/../include/hashendemenge.hpp
+  /Users/lukasbaumeister/zettel0/hashendeMenge/test/../src/hashendeMengerealisation.cpp \
+  /Users/lukasbaumeister/zettel0/hashendeMenge/test/../src/../include/list.hpp \
+  /Users/lukasbaumeister/zettel0/hashendeMenge/test/../src/../include/listnode.hpp \
+  /Users/lukasbaumeister/zettel0/hashendeMenge/test/../src/../include/HashendeMengeRealisation.hpp \
+  /Users/lukasbaumeister/zettel0/hashendeMenge/test/../src/../include/HashendeMenge.hpp

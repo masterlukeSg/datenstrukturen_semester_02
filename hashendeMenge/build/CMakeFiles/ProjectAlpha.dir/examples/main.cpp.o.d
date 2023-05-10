@@ -1,5 +1,5 @@
 CMakeFiles/ProjectAlpha.dir/examples/main.cpp.o: \
-  /Users/lukasbaumeister/zettel0/HashendeMenge/examples/main.cpp \
+  /Users/lukasbaumeister/zettel0/hashendeMenge/examples/main.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config \
@@ -731,8 +731,9 @@ CMakeFiles/ProjectAlpha.dir/examples/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
-  /Users/lukasbaumeister/zettel0/HashendeMenge/examples/../src/hashendeMengerealisation.cpp \
-  /Users/lukasbaumeister/zettel0/HashendeMenge/examples/../src/../include/list.hpp \
-  /Users/lukasbaumeister/zettel0/HashendeMenge/examples/../src/../include/listnode.hpp \
-  /Users/lukasbaumeister/zettel0/HashendeMenge/examples/../src/../include/hashendeMengerealisation.hpp \
-  /Users/lukasbaumeister/zettel0/HashendeMenge/examples/../src/../include/hashendemenge.hpp
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/unordered_set \
+  /Users/lukasbaumeister/zettel0/hashendeMenge/examples/../src/hashendeMengerealisation.cpp \
+  /Users/lukasbaumeister/zettel0/hashendeMenge/examples/../src/../include/list.hpp \
+  /Users/lukasbaumeister/zettel0/hashendeMenge/examples/../src/../include/listnode.hpp \
+  /Users/lukasbaumeister/zettel0/hashendeMenge/examples/../src/../include/HashendeMengeRealisation.hpp \
+  /Users/lukasbaumeister/zettel0/hashendeMenge/examples/../src/../include/HashendeMenge.hpp

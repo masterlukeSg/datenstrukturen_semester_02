@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lukasbaumeister/zettel0/HashendeMenge
+CMAKE_SOURCE_DIR = /Users/lukasbaumeister/zettel0/hashendeMenge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lukasbaumeister/zettel0/HashendeMenge/build
+CMAKE_BINARY_DIR = /Users/lukasbaumeister/zettel0/hashendeMenge/build
 
 # Include any dependencies generated for this target.
 include _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend.make
@@ -72,7 +72,7 @@ include _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/flags.make
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/flags.make
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: _deps/googletest-src/googletest/src/gtest_main.cc
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lukasbaumeister/zettel0/HashendeMenge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lukasbaumeister/zettel0/hashendeMenge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
 	cd /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-build/googletest && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -MF CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-src/googletest/src/gtest_main.cc
 
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i: cmake_force
@@ -93,7 +93,7 @@ gtest_main_EXTERNAL_OBJECTS =
 lib/libgtest_main.a: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
 lib/libgtest_main.a: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make
 lib/libgtest_main.a: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lukasbaumeister/zettel0/HashendeMenge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgtest_main.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lukasbaumeister/zettel0/hashendeMenge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgtest_main.a"
 	cd /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-build/googletest && $(CMAKE_COMMAND) -P CMakeFiles/gtest_main.dir/cmake_clean_target.cmake
 	cd /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-build/googletest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest_main.dir/link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean:
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean
 
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend:
-	cd /Users/lukasbaumeister/zettel0/HashendeMenge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lukasbaumeister/zettel0/HashendeMenge /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-src/googletest /Users/lukasbaumeister/zettel0/HashendeMenge/build /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-build/googletest /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/lukasbaumeister/zettel0/hashendeMenge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lukasbaumeister/zettel0/hashendeMenge /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-src/googletest /Users/lukasbaumeister/zettel0/hashendeMenge/build /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-build/googletest /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 

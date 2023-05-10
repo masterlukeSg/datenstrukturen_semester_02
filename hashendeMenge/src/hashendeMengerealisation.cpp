@@ -1,6 +1,6 @@
 #include "../include/list.hpp"
 #include "../include/listnode.hpp"
-#include "../include/hashendeMengerealisation.hpp"
+#include "../include/HashendeMengeRealisation.hpp"
 
 #include <functional>
 #include <iostream>
@@ -16,7 +16,7 @@ using namespace ProjectAlpha;
  */
 template <class T>
 hashendeMengerealisation<T>::hashendeMengerealisation() : hashfkt(std::hash<T>()),
-                                                          num_buckets(32)
+                                                          num_buckets(100)
 {
      buckets = std::vector<List<T>>(num_buckets);
 }
@@ -72,42 +72,44 @@ void hashendeMengerealisation<T>::insert(const T x)
  * @param x
  */
 template <class T>
-void hashendeMengerealisation<T>::remove(const T &x)
+void hashendeMengerealisation<T>::remove(const T &s)
 {
-     if (not find(x))
-     {
-          throw std::logic_error("Das Element konnte nicht gefunden werden!");
-          return;
-     }
-     double s = size();
-     double a = num_buckets;
+     // gibt es das element
+     if (!find(s))
+          throw std::logic_error("Das Element existiert nicht");
 
-     if ((s / a) > 0.25)
+     // abfrage: liste weniger als 0,25 belegt: dann dann Liste halbieren
+     double sizeD = size();
+     double num_bucketsD = num_buckets;
+     if ((sizeD / num_bucketsD) <= 0.25)
      {
-          int element = hashfkt(x) % num_buckets;
-          std::shared_ptr<listnode<T>> aktuell = buckets[element].get_head();
-          if (aktuell->data_ == x)
-          {
-               buckets[element].remove_front();
-          }
-          std::shared_ptr<listnode<T>> hilfe = aktuell;
-          while (aktuell != nullptr)
-          {
-               if (aktuell->data_ == x)
-               {
-                    buckets[element].remove_after(hilfe);
-                    break;
-               }
-               hilfe = aktuell;
-               aktuell = aktuell->next;
-          }
+          belegungsfaktor();
+          remove(s);
      }
      else
      {
-          belegungsfaktor();
-          remove(x);
+          int buket = hashfkt(s) % num_buckets;
+          std::shared_ptr<listnode<T>> current = buckets[buket].get_head();
+
+          // zu entfernende element ist head
+          if (current->data_ == s)
+          {
+               buckets[buket].remove_front();
+               return;
+          }
+
+          // da das erste element oben schon gelöscht wird, klappt die Schleife
+          std::shared_ptr<listnode<T>> vorC = current;
+          while (current)
+          {
+               if (current->data_ == s)
+                    buckets[buket].remove_after(vorC);
+               vorC = current;
+               current = vorC->next;
+          }
      }
 }
+
 /**
  * @brief belegungsfaktor fkt.
  * Alle Daten im Zwischenspeicher speicheren. Wenn size/num_buckts größer gleich 0,75 wird die hashendeMenge verdoppelts

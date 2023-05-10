@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lukasbaumeister/zettel0/HashendeMenge
+CMAKE_SOURCE_DIR = /Users/lukasbaumeister/zettel0/hashendeMenge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lukasbaumeister/zettel0/HashendeMenge/build
+CMAKE_BINARY_DIR = /Users/lukasbaumeister/zettel0/hashendeMenge/build
 
 # Include any dependencies generated for this target.
 include _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend.make
@@ -72,7 +72,7 @@ include _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/flags.make
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/flags.make
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: _deps/googletest-src/googlemock/src/gmock-all.cc
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lukasbaumeister/zettel0/HashendeMenge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lukasbaumeister/zettel0/hashendeMenge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
 	cd /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-build/googlemock && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -MF CMakeFiles/gmock.dir/src/gmock-all.cc.o.d -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-src/googlemock/src/gmock-all.cc
 
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.i: cmake_force
@@ -93,7 +93,7 @@ gmock_EXTERNAL_OBJECTS =
 lib/libgmock.a: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
 lib/libgmock.a: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make
 lib/libgmock.a: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lukasbaumeister/zettel0/HashendeMenge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgmock.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lukasbaumeister/zettel0/hashendeMenge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgmock.a"
 	cd /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-build/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock.dir/cmake_clean_target.cmake
 	cd /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-build/googlemock && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock.dir/link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean:
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean
 
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend:
-	cd /Users/lukasbaumeister/zettel0/HashendeMenge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lukasbaumeister/zettel0/HashendeMenge /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-src/googlemock /Users/lukasbaumeister/zettel0/HashendeMenge/build /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-build/googlemock /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/lukasbaumeister/zettel0/hashendeMenge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lukasbaumeister/zettel0/hashendeMenge /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-src/googlemock /Users/lukasbaumeister/zettel0/hashendeMenge/build /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-build/googlemock /Users/lukasbaumeister/zettel0/HashendeMenge/build/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 
