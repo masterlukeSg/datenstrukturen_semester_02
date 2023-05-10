@@ -1,19 +1,22 @@
 #include <gtest/gtest.h>
 #include "../include/list.hpp"
-#i
 
+
+
+
+#include "../include/Doubly_Linked_List.hpp"
+#include "../include/listnode.hpp"
+#include <memory>
+#include "iostream"
 
 
 using namespace ProjectAlpha;
 
-TEST(List, insert_front)
+TEST(DoublyLinkedList, getHead)
 {
- List < int> lis = List<int> lis();
- lis.insert_front(5);
- lis.insert_front(7);
- lis.insert_front(10);
- lis.insert_front(4);
+    DoublyLinkedList<int> lis;
 
- EXPECT_EQ(lis.getHead(),4) << "Das erste Element wurde nicht richtig zurueck gegeben";
+    //std::shared_ptr<ListNode<int> > erstesElement =  lis.insert_front(4);
 
+    //EXPECT_EQ(lis.insert_front(4)->data_, erstesElement->data_) << "Das erste Element wurde nicht richtig zurueck gegeben";
 }

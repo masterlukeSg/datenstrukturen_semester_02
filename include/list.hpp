@@ -55,8 +55,7 @@ namespace ProjectAlpha
          * Print the current List
          */
         void print() const;
-
-
+         std::shared_ptr<ListNode<T>> getHead();
 
     private:
         /**
@@ -64,8 +63,6 @@ namespace ProjectAlpha
          *Ist das erste Element der Liste
          */
         std::shared_ptr<ListNode<T>> head;
-        T getHead();
-
     };
 
 }
