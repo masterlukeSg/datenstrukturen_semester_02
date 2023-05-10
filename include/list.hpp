@@ -56,6 +56,8 @@ namespace ProjectAlpha
          */
         void print() const;
 
+        std::shared_ptr<ListNode<T>> getHead();
+
     private:
         /**
          * @brief head

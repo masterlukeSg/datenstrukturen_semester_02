@@ -3,48 +3,69 @@
 #include "../include/listnode.hpp"
 #include "../src/linkedlist.cpp"
 #include <memory>
+#include <list>
 
-//
-// Entry point of the program execution...
-//
- using namespace ProjectAlpha;
+using namespace ProjectAlpha;
 
- int main() {
-   try{
-    List<int> liste;
-    std::shared_ptr<ListNode<int>> current;
+int main()
+{
 
-    // prints the (empty) list
-    liste.print();
+    std::chrono::time_point<std::chrono::steady_clock> start, end;
 
-    // adding 10, 30, 50 at the beginning of the list and printing it
-    liste.insert_front(10);
-    current = liste.insert_front(30);
-    liste.insert_front(50);
-    liste.print();
+    int z = 10;
+    for (int d = 0; d < 7; d++)
+    {
+        std::vector<double> laufzeiten, biblaufzeiten;
 
-    // inserting 200 after 30, 100 after 30, 500 after 100 and printing it
-    liste.insert_after(current, 200);
-    current = liste.insert_after(current, 100);
-    liste.insert_after(current, 500);
-    liste.print();
+        // 20 mal den Test durchlaufen
+        // for (int x = 0; x < 20; x++)
+        //{
+        std::list<int> stdandardBib;
+        List<int> pq = List<int>();
 
-    // removing 50 and printing it
-    liste.remove_front();
-    liste.print();
+        // z Elemente in der Priority Queue bevor der Test ausgeführt wird
+        for (int i = 0; i < z; i++)
+        {
+            int prio = rand() % 20;
+            stdandardBib.push_front(prio);
+            pq.insert_front(prio);
+        }
+        // startet die Clock
+        start = std::chrono::steady_clock::now();
+        // pq.remove();
+        pq.insert_front(4);
+        // pq.get_size();
+        //  endet die Clock
+        end = std::chrono::steady_clock::now();
 
-    // removing 500 and printing it
-    liste.remove_after(current);
-    liste.print();
+        double my = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
 
-    // removing after 10 (which is null) and printing it
-    liste.remove_after(current -> next -> next);
-    liste.print();
-  
-}
+        // startet die Clock
+        start = std::chrono::steady_clock::now();
+        // stdandardBib.pop();
+        stdandardBib.push_front(4);
+        // stdandardBib.size();
+        //  endet die Clock
+        end = std::chrono::steady_clock::now();
 
-catch(std::logic_error E){
-  std::cout<<"Ausnahme"<< E.what()<< "behandelt" << std::endl;
-}
+        double standard = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
+        std::cout << my << " |  " << standard << std::endl;
+    }
 
+    // std::cout << "TEST" << std::endl;
+
+    /*double zeiten, bibzeiten;
+    for (int b = 0; b < laufzeiten.size(); b++)
+    {
+      // std::cout << laufzeiten[b] << " |  " << biblaufzeiten[b] << std::endl;
+      zeiten = laufzeiten[b] + zeiten;
+      bibzeiten = biblaufzeiten[b] + bibzeiten;
+
+
+    std::cout << "FÜR: " << z << std::endl;
+    std::cout << "Durchschnitt [MY]: " << zeiten  << std::endl;
+    std::cout << "Durchschnitt [STANDARD]: " << bibzeiten << std::endl;
+  }*/
+    z = z * 10;
+    //}
 }

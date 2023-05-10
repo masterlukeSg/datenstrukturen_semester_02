@@ -153,7 +153,7 @@ namespace ProjectAlpha
     {
         if (n->next == nullptr)
         {
-            throw std::out_of_range("Das Element hat keinen Nachfolger")
+            throw std::out_of_range("Das Element hat keinen Nachfolger");
         }
         return n->next;
     }
