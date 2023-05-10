@@ -55,7 +55,8 @@ namespace ProjectAlpha
          * Print the current List
          */
         void print() const;
-         std::shared_ptr<ListNode<T>> getHead();
+
+        std::shared_ptr<ListNode<T>> getHead();
 
     private:
         /**

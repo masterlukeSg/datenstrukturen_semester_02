@@ -80,7 +80,7 @@ namespace ProjectAlpha
     {
         if (!head)
         { // if we have an empty list we do not need to remove anything
-            throw std::length_error("Es exstieren keine Elemente zum Entfernen")
+            throw std::length_error("Es exstieren keine Elemente zum Entfernen");
         }
         return nullptr;
 
@@ -125,7 +125,7 @@ namespace ProjectAlpha
     {
         if (current->next == nullptr)
         {
-            throw std::out_of_range("Das Element hat kein Nachfolger")
+            throw std::out_of_range("Das Element hat kein Nachfolger");
         }
         return current->next;
     }
