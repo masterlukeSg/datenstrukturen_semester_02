@@ -31,6 +31,7 @@
 ## Aufgabe 2.3: Untitest
         Queue -> Imene
         Stack -> Imene
+        Einfach verkettete List -> Aicha
         Hashende Menge -> Lukas
         Priority Queue -> Lukas
 
