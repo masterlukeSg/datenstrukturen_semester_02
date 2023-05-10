@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(ProjectAlpha VERSION 0.1.0)
 set(CMAKE_CXX_STANDARD 17)
-add_executable(ProjectAlpha examples/main_double_list.cpp)
+add_executable(ProjectAlpha examples/main_list.cpp)
 
 include(FetchContent)
 if (CMAKE_VERSION VERSION_GREATER_EQUAL "3.24.0")
