@@ -9,7 +9,7 @@ using namespace ProjectAlpha;
 TEST(PQueue_realisation, remove)
 {
 
-    PQueue_realisation<std::string, int> pq = PQueue_realisation<std::string, int>();
+    PQueue_realisation <std::string, int> pq = PQueue_realisation<std::string, int>();
     pq.insert("LukasIstCool", 15);
     pq.insert("ImeneIstCool", 16);
     pq.insert("TorgeIstCool", 14);

@@ -178,8 +178,6 @@ void PQueue_realisation<T, Prio>::insert(T data, int prioritaet)
 template <class T, class Prio>
 int PQueue_realisation<T, Prio>::parent(int i)
 {
-    // TODO: 
-    // end = std::chrono::steady_clock::now();
     int t = (i - 1) / 2;
     return t;
 }
