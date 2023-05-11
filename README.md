@@ -38,6 +38,8 @@
 
 ## Aufgabe 3.1: Laufzeittest
         Priority Queue -> Lukas
+        ![alt text](https://github.com/baumeisterl0/zettel0/blob/main/removePrio.png?raw=true)
+
         Hashende Menge -> Lukas
 
 
