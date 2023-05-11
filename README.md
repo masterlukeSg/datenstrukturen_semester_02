@@ -45,8 +45,11 @@
 
         Hashende Menge -> Lukas
 
-![Employee data](/insertPrio.png?raw=true "Employee Data title")
+![Employee data](/insertPrio.png?raw=true "Inert Funktion")
 
+![Employee data](/remove.png?raw=true "Remove Funktion")
+
+![Employee data](/size.png?raw=true "Size Funktion")
 
 
 
