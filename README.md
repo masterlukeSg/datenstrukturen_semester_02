@@ -55,6 +55,22 @@
 ![Employee data](/sizePrio.png?raw=true "Size Funktion")
 
 
+## Laufzeit für Hashende Menge
+
+# Insert Funktion
+![Employee data](/insertHash.png?raw=true "Inert Funktion")
+
+# Remove Funktion
+![Employee data](/removeHash.png?raw=true "Remove Funktion")
+
+# Find Funktion
+![Employee data](/findHash.png?raw=true "Find Funktion")
+
+# Size Funktion
+![Employee data](/sizeHash.png?raw=true "Size Funktion")
+
+
+
 
 
 
