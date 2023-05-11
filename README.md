@@ -41,7 +41,7 @@
 
 ## Aufgabe 3.1: Laufzeittest
         Priority Queue -> Lukas
-        ![alt text](https://gitlab.cs.uni-bonn.de/baumeisterl0/zettel0/-/blob/main/insertPrio.png)
+        ![Alt text](https://gitlab.cs.uni-bonn.de/baumeisterl0/zettel0/-/blob/main/insertPrio.png?raw=true)
 
         Hashende Menge -> Lukas
 
