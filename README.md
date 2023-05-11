@@ -47,9 +47,9 @@
 
 ![Employee data](/insertPrio.png?raw=true "Inert Funktion")
 
-![Employee data](/remove.png?raw=true "Remove Funktion")
+![Employee data](/removePrio.png?raw=true "Remove Funktion")
 
-![Employee data](/size.png?raw=true "Size Funktion")
+![Employee data](/sizePrio.png?raw=true "Size Funktion")
 
 
 
