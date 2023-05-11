@@ -44,8 +44,8 @@
         ![Alt text](https://gitlab.cs.uni-bonn.de/baumeisterl0/zettel0/-/blob/main/insertPrio.png?raw=true)
 
         Hashende Menge -> Lukas
-
-![Employee data](/insertPrio.png?raw=true "Inert Funktion")
+## Laufzzeit für Priority Queue
+        ![Employee data](/insertPrio.png?raw=true "Inert Funktion")
 
 ![Employee data](/removePrio.png?raw=true "Remove Funktion")
 
