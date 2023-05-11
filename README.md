@@ -41,15 +41,20 @@
 
 ## Aufgabe 3.1: Laufzeittest
         Priority Queue -> Lukas
-        ![Alt text](https://gitlab.cs.uni-bonn.de/baumeisterl0/zettel0/-/blob/main/insertPrio.png?raw=true)
-
         Hashende Menge -> Lukas
-## Laufzzeit für Priority Queue
-        ![Employee data](/insertPrio.png?raw=true "Inert Funktion")
 
+## Laufzzeit für Priority Queue
+
+# Insert Funktion
+![Employee data](/insertPrio.png?raw=true "Inert Funktion")
+
+# Remove Funktion
 ![Employee data](/removePrio.png?raw=true "Remove Funktion")
 
+# Size Funktion
 ![Employee data](/sizePrio.png?raw=true "Size Funktion")
+
+
 
 
 
